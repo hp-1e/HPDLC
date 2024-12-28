@@ -1,0 +1,36 @@
+{
+    "size": "large",
+    "color": "#9400D3",
+    "leash_range": 640000,
+    "allow_discarding": true,
+
+    "waves": [
+        {
+    "entities": [
+      {"entity": "dummmmmmy:target_dummy","nbt": "{KubeJSPersistentData:{champion:[\"hpdlc2\"]}}"},
+      {"entity": "cataclysm:ancient_remnant"}
+    ],
+      "modifiers": [
+      {
+      "attribute": "generic.max_health",    
+      "operation": "MULTIPLY_BASE",    
+      "value": 20000.0   
+      }
+        ],
+      "rewards": [],
+      "max_wave_time": 36000,
+      "setup_time": 0
+ }
+    ],
+
+    "failures": [
+      {
+        "type": "gateways:explosion",
+        "strength": 4,
+        "fire": true,
+        "block_damage": true
+      }
+    ],
+    "completion_xp": 10000,
+    "spawn_range": 5
+ }
