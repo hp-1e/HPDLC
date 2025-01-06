@@ -1,5 +1,7 @@
 {
+    "item.hpdlc.bahui_eye":"巴虺之眼",
     "item.hpdlc.storm_metal_ingot":"风暴合金",
+    "item.hpdlc.daqianlu":"大千录",
     "item.hpdlc.withered_nether_star1":"风暴之星—赝品",
     "item.hpdlc.storm_metal_plate1":"风暴金属板—赝品",
     "hpdlc.dragon_attack":"龙袭",
@@ -96,8 +98,8 @@
     "hpdlc.tooltips.jixiefatiaogai.2":"在奔跑时增加资源点，数量与移动速度相关",
 
     "item.hpdlc.primitive_redstone_furnace":"简陋红石熔炉",
-    "hpdlc.tooltips.primitive_redstone_furnace.2":"手持煤炭右键以直接获取50资源点数",
-    "hpdlc.tooltips.primitive_redstone_furnace.3":"利用红石科技将煤炭转化为资源点",
+    "hpdlc.tooltips.primitive_redstone_furnace.2":"手持煤炭或木炭右键以直接获取50资源点数",
+    "hpdlc.tooltips.primitive_redstone_furnace.3":"利用红石科技将煤炭/木炭转化为资源点",
 
     "item.hpdlc.night_vision_device":"夜视仪",
     "hpdlc.tooltips.night_vision_device.1":"消耗较高资源点，能让你在黑暗环境看的更清楚",
@@ -279,9 +281,7 @@
 
     "item.hpdlc.zombie_heart":"僵尸之心",
     "hpdlc.tooltips.zombie_heart.1":"它还在微弱的跳动",
-    "hpdlc.tooltips.zombie_heart.2":"免疫中毒，受到的窒息伤害为0",
-    "hpdlc.tooltips.zombie_heart.3":"有概率获取缓慢buff",
-
+    "hpdlc.tooltips.zombie_heart.2":"移除自身中毒buff",
     
     "item.hpdlc.soul_fire":"魂火——骷髅",
     "hpdlc.tooltips.soul_fire.1":"蕴含着小白毕生的技艺",
@@ -390,12 +390,12 @@
     "hpdlc.tooltips.cursed_heart.3":"盔甲主副手武器每种诅咒增加百分之0.5的伤害",
 
     "item.hpdlc.pulverizer1":"粉碎机",
-    "hpdlc.tooltips.pulverizer1.1":"圆石生万物",
-    "hpdlc.tooltips.pulverizer1.2":"挖掘石头时掉落矿蔟，并且消耗500资源点",
+    "hpdlc.tooltips.pulverizer1.1":"诅咒缠身，悲风满路",
+    "hpdlc.tooltips.pulverizer1.2":"挖掘石头时掉落矿蔟，并且消耗100资源点",
     "hpdlc.tooltips.pulverizer1.3":"掉落矿蔟的数量与机械器官的数量相关",
 
     "item.hpdlc.cursed_soul_gai":"千咒之魂—改",
-    "hpdlc.tooltips.cursed_soul_gai.1":"诅咒缠身，悲风满路",
+    "hpdlc.tooltips.cursed_soul_gai.1":"圆石生万物",
     "hpdlc.tooltips.cursed_soul_gai.2":"根据自身主副手和盔甲栏物品的诅咒附魔修改承受的伤害",
     "hpdlc.tooltips.cursed_soul_gai.3":"最多减免百分之80的伤害",
 
@@ -408,6 +408,15 @@
     "hpdlc.tooltips.newborn_dimension.0":"成长等级",
     "hpdlc.tooltips.newborn_dimension.1":"新生的维度，可通过风暴锭进行更进一步的喂养，改造升级",
     "hpdlc.tooltips.newborn_dimension.2":"每级成长等级加1机械飞升进度",
+
+    "item.hpdlc.water_wheel1":"水车",
+    "hpdlc.tooltips.water_wheel1":"如果器官周围有水桶，每秒增加2资源点",
+
+    "item.hpdlc.large_water_wheel1":"大型水车",
+    "hpdlc.tooltips.large_water_wheel1":"如果器官周围有水桶，每秒增加4资源点",
+
+    "item.hpdlc.windmill_bearing1":"风车轴承",
+    "hpdlc.tooltips.windmill_bearing1":"如果器官周围有风帆，每秒增加8资源点",
 
     "item.hpdlc.chicken_liver":"肝型麦乐鸡",
     "hpdlc.tooltips.chicken_liver.1":"每一点幸运属性，每秒有百分之2的概率清除自身debff"
