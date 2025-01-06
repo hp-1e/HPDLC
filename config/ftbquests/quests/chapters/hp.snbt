@@ -9,7 +9,7 @@
 		tag: { }
 	}
 	id: "20EE5BB3599F0BB5"
-	order_index: 0
+	order_index: 2
 	quest_links: [ ]
 	quests: [
 		{
@@ -231,12 +231,15 @@
 				}
 				type: "item"
 			}]
-			x: -9.5d
-			y: -8.5d
+			x: -12.5d
+			y: -8.25d
 		}
 		{
 			dependencies: ["4160D5214C40A294"]
-			description: ["简陋红石熔炉的进阶器官"]
+			description: [
+				"简陋红石熔炉的进阶器官"
+				"捕捉笼右键刷怪笼，获取的东西可以被视为刷怪蛋，诅咒笼可以被视为刷怪笼，组合起来可以把烈焰人刷怪笼搬回家"
+			]
 			id: "2CA8097CBE24FED5"
 			rewards: [{
 				id: "2F3758ED744A7A56"
@@ -252,8 +255,8 @@
 				}
 				type: "item"
 			}]
-			x: -8.25d
-			y: -8.5d
+			x: -11.5d
+			y: -8.25d
 		}
 		{
 			dependencies: ["4160D5214C40A294"]
@@ -268,8 +271,8 @@
 				}
 				type: "item"
 			}]
-			x: -7.0d
-			y: -8.5d
+			x: -10.5d
+			y: -8.25d
 		}
 		{
 			dependencies: ["4160D5214C40A294"]
@@ -310,8 +313,8 @@
 					type: "item"
 				}
 			]
-			x: -16.0d
-			y: -8.5d
+			x: -17.5d
+			y: -8.25d
 		}
 		{
 			dependencies: ["4160D5214C40A294"]
@@ -331,8 +334,8 @@
 				}
 				type: "item"
 			}]
-			x: -14.5d
-			y: -8.5d
+			x: -16.5d
+			y: -8.25d
 		}
 		{
 			dependencies: ["4160D5214C40A294"]
@@ -352,8 +355,8 @@
 				}
 				type: "item"
 			}]
-			x: -13.25d
-			y: -8.5d
+			x: -15.5d
+			y: -8.25d
 		}
 		{
 			dependencies: ["4160D5214C40A294"]
@@ -373,32 +376,8 @@
 				}
 				type: "item"
 			}]
-			x: -5.75d
-			y: -8.5d
-		}
-		{
-			dependencies: ["4160D5214C40A294"]
-			description: [
-				"增加战利品的掉落"
-				"黑暗铁砧能通过两本一样的附魔书合成超出原版上限的等级"
-			]
-			id: "5C6A592CC4AABBDC"
-			rewards: [{
-				id: "219141FB3242AC15"
-				item: "lightmanscurrency:coin_gold"
-				type: "item"
-			}]
-			tasks: [{
-				id: "1CF78762DF071E37"
-				item: {
-					Count: 1b
-					id: "hpdlc:micro_processing_factory"
-					tag: { }
-				}
-				type: "item"
-			}]
-			x: -12.0d
-			y: -8.5d
+			x: -9.5d
+			y: -8.25d
 		}
 		{
 			dependencies: ["4160D5214C40A294"]
@@ -418,8 +397,8 @@
 				}
 				type: "item"
 			}]
-			x: -4.5d
-			y: -8.5d
+			x: -8.5d
+			y: -8.25d
 		}
 		{
 			dependencies: ["4160D5214C40A294"]
@@ -438,7 +417,7 @@
 				}
 				type: "item"
 			}]
-			x: -9.5d
+			x: -12.5d
 			y: -6.75d
 		}
 		{
@@ -458,7 +437,7 @@
 				}
 				type: "item"
 			}]
-			x: -10.75d
+			x: -13.5d
 			y: -6.75d
 		}
 		{
@@ -479,7 +458,7 @@
 				}
 				type: "item"
 			}]
-			x: -8.25d
+			x: -11.5d
 			y: -6.75d
 		}
 		{
@@ -500,7 +479,7 @@
 				}
 				type: "item"
 			}]
-			x: -7.0d
+			x: -10.5d
 			y: -6.75d
 		}
 		{
@@ -521,7 +500,7 @@
 				}
 				type: "item"
 			}]
-			x: -16.0d
+			x: -17.5d
 			y: -6.75d
 		}
 		{
@@ -542,7 +521,7 @@
 				}
 				type: "item"
 			}]
-			x: -14.5d
+			x: -16.5d
 			y: -6.75d
 		}
 		{
@@ -562,7 +541,7 @@
 				}
 				type: "item"
 			}]
-			x: -13.25d
+			x: -15.5d
 			y: -6.75d
 		}
 		{
@@ -582,8 +561,8 @@
 				}
 				type: "item"
 			}]
-			x: -10.75d
-			y: -8.5d
+			x: -13.5d
+			y: -8.25d
 		}
 		{
 			dependencies: ["4160D5214C40A294"]
@@ -603,7 +582,7 @@
 				}
 				type: "item"
 			}]
-			x: -3.25d
+			x: -7.5d
 			y: -6.75d
 		}
 		{
@@ -624,8 +603,8 @@
 				}
 				type: "item"
 			}]
-			x: -3.25d
-			y: -8.5d
+			x: -7.5d
+			y: -8.25d
 		}
 		{
 			dependencies: ["4160D5214C40A294"]
@@ -650,7 +629,7 @@
 				}
 				type: "item"
 			}]
-			x: -12.0d
+			x: -14.5d
 			y: -6.75d
 		}
 		{
@@ -671,7 +650,7 @@
 				}
 				type: "item"
 			}]
-			x: -5.75d
+			x: -9.5d
 			y: -6.75d
 		}
 		{
@@ -704,7 +683,7 @@
 				}
 				type: "item"
 			}]
-			x: -17.75d
+			x: -18.5d
 			y: -5.25d
 		}
 		{
@@ -725,7 +704,7 @@
 				}
 				type: "item"
 			}]
-			x: -16.0d
+			x: -17.5d
 			y: -5.25d
 		}
 		{
@@ -746,7 +725,7 @@
 				}
 				type: "item"
 			}]
-			x: -14.5d
+			x: -16.5d
 			y: -5.25d
 		}
 		{
@@ -803,8 +782,8 @@
 				}
 				type: "item"
 			}]
-			x: -2.0d
-			y: -8.5d
+			x: -14.5d
+			y: -8.25d
 		}
 		{
 			dependencies: ["16431CB33B320C5C"]
@@ -842,7 +821,7 @@
 				type: "item"
 			}]
 			title: "龙炎锻炉"
-			x: -20.0d
+			x: -20.5d
 			y: 5.5d
 		}
 		{
@@ -880,7 +859,7 @@
 				type: "item"
 			}]
 			title: "龙霜锻炉"
-			x: -18.5d
+			x: -19.5d
 			y: 5.5d
 		}
 		{
@@ -947,7 +926,7 @@
 				title: "先驱者已增加召唤方式"
 				type: "checkmark"
 			}]
-			x: -17.0d
+			x: -18.5d
 			y: 5.5d
 		}
 		{
@@ -1171,7 +1150,7 @@
 				}
 				type: "item"
 			}]
-			x: -17.75d
+			x: -18.5d
 			y: -3.0d
 		}
 		{
@@ -1214,7 +1193,7 @@
 				}
 			]
 			title: "凋零玫瑰"
-			x: -16.0d
+			x: -17.5d
 			y: -3.0d
 		}
 		{
@@ -1258,7 +1237,7 @@
 				}
 			]
 			title: "风暴玫瑰"
-			x: -14.5d
+			x: -16.5d
 			y: -3.0d
 		}
 		{
@@ -1337,7 +1316,7 @@
 				}
 			]
 			title: "麦乐鸡全家桶"
-			x: -17.75d
+			x: -18.5d
 			y: -0.75d
 		}
 		{
@@ -1357,7 +1336,7 @@
 				}
 				type: "item"
 			}]
-			x: -16.0d
+			x: -17.5d
 			y: -0.75d
 		}
 		{
@@ -1377,7 +1356,7 @@
 				}
 				type: "item"
 			}]
-			x: -14.5d
+			x: -16.5d
 			y: -0.75d
 		}
 		{
@@ -1398,7 +1377,7 @@
 				}
 				type: "item"
 			}]
-			x: -13.0d
+			x: -15.5d
 			y: -0.75d
 		}
 		{
@@ -1477,7 +1456,7 @@
 				}
 			]
 			title: "红宝石兑换"
-			x: -15.75d
+			x: -17.5d
 			y: 5.5d
 		}
 		{
@@ -1500,7 +1479,7 @@
 				}
 				type: "item"
 			}]
-			x: -20.0d
+			x: -20.5d
 			y: 7.0d
 		}
 		{
@@ -1523,7 +1502,7 @@
 				}
 				type: "item"
 			}]
-			x: -18.5d
+			x: -19.5d
 			y: 7.0d
 		}
 		{
@@ -1543,7 +1522,7 @@
 				}
 				type: "item"
 			}]
-			x: -17.75d
+			x: -6.5d
 			y: -6.75d
 		}
 		{
@@ -1563,8 +1542,8 @@
 				}
 				type: "item"
 			}]
-			x: -17.75d
-			y: -8.5d
+			x: -18.5d
+			y: -8.25d
 		}
 		{
 			dependencies: ["4160D5214C40A294"]
@@ -1578,7 +1557,7 @@
 				}
 				type: "item"
 			}]
-			x: -4.5d
+			x: -8.5d
 			y: -6.75d
 		}
 		{
@@ -1615,7 +1594,7 @@
 				}
 				type: "item"
 			}]
-			x: -17.75d
+			x: -18.5d
 			y: 3.0d
 		}
 		{
@@ -1635,7 +1614,7 @@
 				}
 				type: "item"
 			}]
-			x: -16.0d
+			x: -17.5d
 			y: 3.0d
 		}
 		{
@@ -1655,8 +1634,79 @@
 				}
 				type: "item"
 			}]
-			x: -14.25d
+			x: -16.5d
 			y: 3.0d
+		}
+		{
+			id: "37790BBA55D4A63A"
+			rewards: [{
+				count: 3
+				id: "0C3B8E6DCD955343"
+				item: "lightmanscurrency:coin_gold"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "003995360DBCAFD3"
+					item: "create:large_water_wheel"
+					type: "item"
+				}
+				{
+					id: "4FCE3996DFC34735"
+					item: {
+						Count: 1b
+						id: "hpdlc:water_wheel1"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "0C52FE7042E4DAB2"
+					item: {
+						Count: 1b
+						id: "hpdlc:windmill_bearing1"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			x: -18.5d
+			y: -6.75d
+		}
+		{
+			id: "28E9AD318A6F4F37"
+			rewards: [{
+				id: "403762EB7598961A"
+				item: {
+					Count: 1b
+					id: "minecraft:enchanted_book"
+					tag: {
+						StoredEnchantments: [{
+							id: "kubejs:creative_operation"
+							lvl: 1s
+						}]
+					}
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "5164EF8841431556"
+					item: "hpdlc:withered_nether_star1"
+					type: "item"
+				}
+				{
+					id: "732A489D3B349FF5"
+					item: {
+						Count: 1b
+						id: "hpdlc:storm_metal_plate1"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			x: -16.5d
+			y: 5.5d
 		}
 	]
 	title: "HP的玩家拓展包"
