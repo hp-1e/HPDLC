@@ -101,11 +101,6 @@ const hpdlcorganPlayerBearOnlyStrategies = {
            updateResourceCount(event.entity, count - 1000)
        }
 },
-    //僵尸之心
-    'hpdlc:zombie_heart': function (event, organ, data) {
-        if (!event.source.getType() == 'drown' ) return
-            event.amount = 0
-},
    //黄金之爱——僵尸猪灵
    'hpdlc:golden_love1': function (event, organ, data) {
     let player = event.entity

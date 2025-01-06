@@ -20,6 +20,8 @@ const hpdlcorganBlockBrokenOnlyStrategies = {
 //代码借鉴了b站up主 是孤梦啊
 'hpdlc:chain_collection_hammer': function (event, organ) {
         let player = event.getPlayer();
+        let mainitem = player.mainHandItem
+        if ((mainitem?.id == 'create:wrench')) return
             let posList = [];
             let maxMultiple = MultipleBlockConfig.maxMultiple;
             let block = event.getBlock();
@@ -96,9 +98,9 @@ const hpdlcorganBlockBrokenOnlyStrategies = {
         let count = player.persistentData.getInt(resourceCount)
         updateResourceCount(player, count + 1)
         if (count >= 500 && Math.random() <= 0.05) {
-            player.give(Item.of('kubejs:rare_mineral_cluster').withCount(amplifier * 3))
-            player.give(Item.of('kubejs:common_mineral_cluster').withCount(amplifier * 3))
-            updateResourceCount(player, count + 1 - 500)
+            player.give(Item.of('kubejs:rare_mineral_cluster').withCount(amplifier * 8))
+            player.give(Item.of('kubejs:common_mineral_cluster').withCount(amplifier * 8))
+            updateResourceCount(player, count + 1 - 100)
         }
 }, 
 

@@ -119,29 +119,48 @@ const  hpdlcorganPlayerTickStrategies = {
             }
         }
         },
-    //僵尸之心
-    'hpdlc:zombie_heart': function (event,organ){
+    //水车
+    'hpdlc:water_wheel1': function (event, organ) {
         let player = event.player
-        let random = Math.random() * 100
-        if (random < 2) {
-            if (player.hasEffect('minecraft:weakness')) {
-                // 获取已有效果
-                let effect = player.getEffect('minecraft:weakness')
-                // 获取效果等级
-                let amplifier = effect.getAmplifier()
-                // 获取效果时长
-                let duration = effect.getDuration()
-                if (duration <= 20 * 60){
-                // 增加效果
-                player.potionEffects.add('minecraft:weakness', duration + 20 * 10 , amplifier)
-            }}
-            // 否则执行以下逻辑
-            else { 
-                // 增加效果
-                player.potionEffects.add('minecraft:weakness', 20 * 10, 0)
-            }
-        }
-        },
+        let count = player.persistentData.getInt(resourceCount)
+		let pos = organ.Slot
+		let posMap = getPlayerChestCavityPosMap(player);
+		fourDirectionList.forEach(direction => {
+			let currentPos = lookPos(direction, pos)
+			if (posMap.has(currentPos) && posMap.get(currentPos).id == 'minecraft:water_bucket') {
+				updateResourceCount(player, count + 2)
+			}
+		})
+        
+    },
+     //大型水车
+    'hpdlc:large_water_wheel1': function (event, organ) {
+        let player = event.player
+        let count = player.persistentData.getInt(resourceCount)
+		let pos = organ.Slot
+		let posMap = getPlayerChestCavityPosMap(player);
+		fourDirectionList.forEach(direction => {
+			let currentPos = lookPos(direction, pos)
+			if (posMap.has(currentPos) && posMap.get(currentPos).id == 'minecraft:water_bucket') {
+				updateResourceCount(player, count + 4)
+			}
+		})
+        
+    },
+     //风车轴承
+     'hpdlc:windmill_bearing1': function (event, organ) {
+        let player = event.player
+        let count = player.persistentData.getInt(resourceCount)
+		let pos = organ.Slot
+		let posMap = getPlayerChestCavityPosMap(player);
+		fourDirectionList.forEach(direction => {
+			let currentPos = lookPos(direction, pos)
+			if (posMap.has(currentPos) && posMap.get(currentPos).id == 'create:white_sail') {
+				updateResourceCount(player, count + 8)
+			}
+		})
+        
+    },
 }
 var assign_organ_player_player_tick = Object.assign( organPlayerTickStrategies,  hpdlcorganPlayerTickStrategies)
 
@@ -203,22 +222,8 @@ const hpdlcOrganPlayerTickOnlyStrategies = {
     //变速齿轮（改）
     'hpdlc:gearbox_gai':function(event,organ){
     let player = event.player
-    if (player.hasEffect('minecraft:haste')) {
-        // 获取已有的夜视效果
-        let effect = player.getEffect('minecraft:haste')
-        // 获取效果等级
-        let amplifier = effect.getAmplifier()
-        // 获取效果时长
-        let duration = effect.getDuration()
-        if (duration <= 20 * 60){
-        // 增加效果
-        player.potionEffects.add('minecraft:haste', duration + 20 * 60, amplifier)
-    }}
-    // 否则执行以下逻辑
-    else { 
-        // 增加效果
-        player.potionEffects.add('minecraft:haste', 20 * 60, 0)
-    }
+    if (player.hasEffect('minecraft:haste'))return
+    player.potionEffects.add('minecraft:haste', 20 * 60, 0)
 },
     //净化装置
     'hpdlc:cleaning_device':function(event,organ){
@@ -274,17 +279,16 @@ const hpdlcOrganPlayerTickOnlyStrategies = {
         let mainitem = player.mainHandItem
         if (count >= maxCount / 2 ) {
             if (mainitem.damageValue >= 20){
-                mainitem.damageValue -= 20
+                mainitem.damageValue = Math.max(mainitem.damageValue-20,0)
                 updateResourceCount(event.entity, count - 20)
             }
         }
 },
     //僵尸之心
     'hpdlc:zombie_heart': function (event,organ) {
-    let entity = event.entity
     let player = event.player
     if (player.hasEffect('minecraft:poison')) {
-    entity.removeEffect('minecraft:poison')
+        player.removeEffect('minecraft:poison')
 }
 },
     //黄金之爱——猪灵

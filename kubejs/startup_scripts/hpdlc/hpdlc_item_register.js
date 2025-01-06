@@ -35,6 +35,20 @@ StartupEvents.registry('item', event => {
     .tag('kubejs:damage_only')
     .tag('kubejs:bear_only');
 
+    //测试
+    registerOrgan(new Organ('hpdlc:ceshi2')
+    .addScore('health',3)
+    .addScore('strength', 6)
+    .addScore('freezing_point', 10)
+    .build());
+
+    //测试
+    registerOrgan(new Organ('hpdlc:ceshi3')
+    .addScore('health',3)
+    .addScore('strength', 6)
+    .addScore('burning_point', 10)
+    .build());
+
     //生锈的机械肌肉
     registerOrgan(new Organ('hpdlc:shengxiudejixiejirou')
     .addTextLines('default',[Text.gray({"translate":"hpdlc.tooltips.shengxiudejixiejirou"})])
@@ -801,10 +815,8 @@ StartupEvents.registry('item', event => {
      .addScore('fire_resistant', -3)
      .addTextLines('default',[Text.gray({"translate":"hpdlc.tooltips.zombie_heart.1"})])
      .addTextLines('alt',[LEADING_SYMBOL,Text.gray({"translate":"hpdlc.tooltips.zombie_heart.2"})])
-     .addTextLines('alt',[LEADING_SYMBOL,Text.gray({"translate":"hpdlc.tooltips.zombie_heart.3"})])
      .build())
      .tag('kubejs:heart')
-     .tag('kubejs:bear_only')
      .tag('kubejs:player_tick_only');
 
      //魂火
@@ -836,14 +848,6 @@ StartupEvents.registry('item', event => {
      .addTextLines('alt',[LEADING_SYMBOL,Text.gray({"translate":"hpdlc.tooltips.golden_love3.2"})])
      .build())
      .tag('kubejs:damage_only');
-
-     //金色书龙鳞片
-     /*
-    registerOrgan(new Organ('hpdlc:book_wyrm_scale1')
-    .addScore('defense',1)
-    .addTextLines('alt', [LEADING_SYMBOL, Text.gray({ "translate": "hpdlc.tooltips.book_wyrm_scale1.1" })])
-    .build())
-    .tag('kubejs:key_pressed');*/
 
     //古老的不死图腾
     registerOrgan(new Organ('hpdlc:totem_of_undying1')
@@ -1164,4 +1168,29 @@ StartupEvents.registry('item', event => {
         .addScore('speed', 0.5)
         .build())
         .tag('kubejs:relics');
+
+    //水车
+    registerOrgan(new Organ('hpdlc:water_wheel1')
+        .addScore('strength', 1)
+        .addScore('speed', -0.25)
+        .addTextLines('alt', [LEADING_SYMBOL, Text.gray({ "translate": "hpdlc.tooltips.water_wheel1" })])
+        .build())
+        .tag('kubejs:player_tick');
+
+    //大型水车
+    registerOrgan(new Organ('hpdlc:large_water_wheel1')
+        .addScore('strength', 1.5)
+        .addScore('speed', -0.5)
+        .addTextLines('alt', [LEADING_SYMBOL, Text.gray({ "translate": "hpdlc.tooltips.large_water_wheel1" })])
+        .build())
+        .tag('kubejs:player_tick');
+    
+    //风车轴承
+    registerOrgan(new Organ('hpdlc:windmill_bearing1')
+        .addScore('strength', 1.5)
+        .addScore('speed', -0.5)
+        .addTextLines('alt', [LEADING_SYMBOL, Text.gray({ "translate": "hpdlc.tooltips.windmill_bearing1" })])
+        .build())
+        .tag('kubejs:player_tick');
+
 })

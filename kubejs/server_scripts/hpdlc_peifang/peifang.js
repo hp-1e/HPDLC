@@ -44,6 +44,18 @@ ServerEvents.recipes(event => {
         [],
         []
     ]);
+    //水车
+    event.shapeless('hpdlc:water_wheel1',[
+        ['create:water_wheel'],
+    ]);
+    //大型水车
+     event.shapeless('hpdlc:large_water_wheel1',[
+        ['create:large_water_wheel'],
+    ]);
+    //风车轴承
+    event.shapeless('hpdlc:windmill_bearing1',[
+        ['create:windmill_bearing'],
+    ]);
     //变速齿轮（改）
     event.shaped('hpdlc:gearbox_gai',[
         [],

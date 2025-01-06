@@ -8,9 +8,7 @@
 const hpdlcorganRightClickedOnlyStrategies = {
     //简陋红石熔炉
     'hpdlc:primitive_redstone_furnace': function (event, organ) {
-        if (event.item != 'minecraft:coal') {
-            return
-        }
+        if (event.item == 'minecraft:coal' || event.item == 'minecraft:charcoal') {
         let player = event.player
         let count = 50;
         if (player.persistentData.contains(resourceCount)) {
@@ -19,6 +17,7 @@ const hpdlcorganRightClickedOnlyStrategies = {
         updateResourceCount(player, count)
         player.swing()
         event.item.shrink(1)
+    }
     },
     //烈焰熔炉
     'hpdlc:flaming_furnace': function (event, organ) {

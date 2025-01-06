@@ -162,42 +162,40 @@ const hpdlcOrganPlayerDamageOnlyStrategies = {
     let attriMap = getPlayerAttributeMap(player)
     let luck = Math.max(player.getLuck(),1)
     let random = Math.random() * (100 + luck)
-    let valuemax = attriMap.get(global.hpdlc_TEMP_ATTACK_UP.name)
-    let countmax = attriMap.get(global.hpdlc_TEMP_MAX_MANA.name)
+    let valuemax = attriMap.get(global.hpdlc_TEMP_ATTACK_UP.name)??0
+    let countmax = attriMap.get(global.hpdlc_TEMP_MAX_MANA.name)??0
     //临时攻击力
-    let value
-        if (random<=50) {
-             value = -luck / 10
-        }
-        else {
-             value = 10
-        }
-        if (attriMap.has(global.hpdlc_TEMP_ATTACK_UP.name)) {
-            value = value + attriMap.get(global.hpdlc_TEMP_ATTACK_UP.name)
-        }
-            attriMap.set(global.hpdlc_TEMP_ATTACK_UP.name, value)
-            player.modifyAttribute(global.hpdlc_TEMP_ATTACK_UP.key, global.hpdlc_TEMP_ATTACK_UP.name, value, global.hpdlc_TEMP_ATTACK_UP.operation);
-            setPlayerAttributeMap(player, attriMap);
-            if (valuemax > luck){
-                player.modifyAttribute(global.hpdlc_TEMP_ATTACK_UP.key, global.hpdlc_TEMP_ATTACK_UP.name, luck, global.hpdlc_TEMP_ATTACK_UP.operation);
-        }
+    if (valuemax <= luck){
+        let value
+            if (random<=50) {
+                value = -luck / 10
+            }
+            else {
+                value = 10
+            }
+            if (attriMap.has(global.hpdlc_TEMP_ATTACK_UP.name)) {
+                value = value + attriMap.get(global.hpdlc_TEMP_ATTACK_UP.name)
+            }
+                attriMap.set(global.hpdlc_TEMP_ATTACK_UP.name, value)
+                player.modifyAttribute(global.hpdlc_TEMP_ATTACK_UP.key, global.hpdlc_TEMP_ATTACK_UP.name, value, global.hpdlc_TEMP_ATTACK_UP.operation);
+                setPlayerAttributeMap(player, attriMap);
+    }
     //临时魔法值上限
-    let count
-        if (random<=50) {
-            count = -luck / 5
-        }
-        if (random>50) {
-            count = luck / 5
-        }
-        if (attriMap.has(global.hpdlc_TEMP_MAX_MANA.name)) {
-            count = count + attriMap.get(global.hpdlc_TEMP_MAX_MANA.name)
-        }
-            attriMap.set(global.hpdlc_TEMP_MAX_MANA.name, count)
-            player.modifyAttribute(global.hpdlc_TEMP_MAX_MANA.key, global.hpdlc_TEMP_MAX_MANA.name, count, global.hpdlc_TEMP_MAX_MANA.operation);
-            setPlayerAttributeMap(player, attriMap);
-            if (countmax > luck * 30){
-                player.modifyAttribute(global.hpdlc_TEMP_MAX_MANA.key, global.hpdlc_TEMP_MAX_MANA.name, luck * 30, global.hpdlc_TEMP_MAX_MANA.operation);
-        }
+    if (countmax <= luck * 30){
+        let count
+            if (random<=50) {
+                count = -luck / 5
+            }
+            if (random>50) {
+                count = luck / 5
+            }
+            if (attriMap.has(global.hpdlc_TEMP_MAX_MANA.name)) {
+                count = count + attriMap.get(global.hpdlc_TEMP_MAX_MANA.name)
+            }
+                attriMap.set(global.hpdlc_TEMP_MAX_MANA.name, count)
+                player.modifyAttribute(global.hpdlc_TEMP_MAX_MANA.key, global.hpdlc_TEMP_MAX_MANA.name, count, global.hpdlc_TEMP_MAX_MANA.operation);
+                setPlayerAttributeMap(player, attriMap);
+    }
 },
 //龙炎动力臂
 'hpdlc:fire_steam_powered_mechanical_arm': function (event, organ, data) {
