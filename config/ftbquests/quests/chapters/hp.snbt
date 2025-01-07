@@ -88,6 +88,12 @@
 								}
 								{
 									Count: 1b
+									Slot: 10b
+									id: "hpdlc:thermostat"
+									tag: { }
+								}
+								{
+									Count: 1b
 									Slot: 11b
 									id: "hpdlc:renzaopi"
 									tag: { }
@@ -754,7 +760,7 @@
 		}
 		{
 			dependencies: ["6694806EA857BDE6"]
-			description: ["击杀一小部分原版怪物有惊喜哦，至于为什么是一小部分因为只写了一小部分"]
+			description: ["击杀部分原版怪物有惊喜哦，至于为什么是部分因为只写了一小部分"]
 			id: "70D74629484850C2"
 			tasks: [{
 				id: "19A503EE2F76A2BA"
@@ -1150,7 +1156,7 @@
 				}
 				type: "item"
 			}]
-			x: -18.5d
+			x: -15.5d
 			y: -3.0d
 		}
 		{
@@ -1707,6 +1713,25 @@
 			]
 			x: -16.5d
 			y: 5.5d
+		}
+		{
+			id: "161DE07C857EA0BD"
+			rewards: [{
+				id: "66B3B6C389A39AAB"
+				item: "lightmanscurrency:coin_gold"
+				type: "item"
+			}]
+			tasks: [{
+				id: "05D75F18CCF2AF33"
+				item: {
+					Count: 1b
+					id: "hpdlc:rose_quartz_heart1"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: -18.5d
+			y: -3.0d
 		}
 	]
 	title: "HP的玩家拓展包"
