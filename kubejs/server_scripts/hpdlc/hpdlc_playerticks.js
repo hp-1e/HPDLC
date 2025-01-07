@@ -442,6 +442,16 @@ const hpdlcOrganPlayerTickOnlyStrategies = {
         updateResourceCount(player, count - 30)
     }
 },
+//恒温器
+'hpdlc:thermostat': function (event,organ) {
+    let player = event.entity
+    let count = player.persistentData.getInt(resourceCount)
+    let temperature = ColdSweat.getTemperature(player, 'body')
+    if (count < 25)return
+    if(temperature < 50 && temperature > -50)return
+        ColdSweat.setTemperature(player, 'core', 0)
+        updateResourceCount(player, count - 25)
+},
 
 
 }

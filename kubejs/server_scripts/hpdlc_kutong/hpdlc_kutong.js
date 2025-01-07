@@ -34,7 +34,7 @@ function hpdlcinitAllBar(player) {
             alignX: 'left',
             alignY: 'bottom',
             //外面的材质
-            texture: 'hpdlc:textures/item/hpdlc_kutong_bar.png',
+            texture: 'hpdlc:textures/item/kutong/hpdlc_kutong_bar.png',
             visible: visible
         },
         hpdlckutongCountBarOverlay: {
@@ -48,7 +48,7 @@ function hpdlcinitAllBar(player) {
             alignX: 'left',
             alignY: 'bottom',
             //里面进度的颜色
-            texture: 'hpdlc:textures/item/hpdlc_kutong_bar_overlay.png',
+            texture: 'hpdlc:textures/item/kutong/hpdlc_kutong_bar_overlay.png',
             visible: visible
         } ,barCountText: {
             type: 'text',

@@ -124,6 +124,17 @@ event.recipes.create.sequenced_assembly([
   create.deploying(incomplete,[incomplete,'hpdlc:storm_metal_ingot']),
 ]).transitionalItem(incomplete).loops(3)
 
+//玫瑰心脏——怀旧版
+event.recipes.create.sequenced_assembly([
+  Item.of('hpdlc:rose_quartz_heart1')
+],'kubejs:rose_quartz_heart',[
+  create.deploying(incomplete,[incomplete,'kubejs:rose_quartz_muscle']),
+  create.cutting(incomplete,incomplete),
+  create.deploying(incomplete,[incomplete,'minecraft:rose_bush']),
+  create.deploying(incomplete,[incomplete,'create:polished_rose_quartz']),
+]).transitionalItem(incomplete).loops(3)
+
+
 //凋零玫瑰心脏
 event.recipes.create.sequenced_assembly([
   Item.of('hpdlc:wither_rose_quartz_heart')

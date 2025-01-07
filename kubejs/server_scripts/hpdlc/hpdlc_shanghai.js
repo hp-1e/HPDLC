@@ -69,9 +69,7 @@ const hpdlcOrganPlayerDamageOnlyStrategies = {
 'hpdlc:micro_processing_factory': function (event, organ, data) {
     let player = event.source.player
     let count = player.persistentData.getInt(resourceCount)??0
-    if (player.getCooldowns().isOnCooldown(Item.of(organ.id))) {
-        return
-    }
+    if (player.getCooldowns().isOnCooldown(Item.of(organ.id))) return
     player.addItemCooldown(organ.id, 2)
     updateResourceCount(player, count + 30)
     getPlayerMagicData(player).addMana(30)
