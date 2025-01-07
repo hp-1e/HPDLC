@@ -269,6 +269,10 @@
     "item.hpdlc.storm_rose_quartz_liver":"风暴玫瑰肝脏",
     "hpdlc.tooltips.storm_rose_quartz_liver.1":"每个种类为玫瑰的器官，会为你添加200点魔法值上限",
 
+    "item.hpdlc.rose_quartz_heart1":"玫瑰心脏—怀旧版",
+    "hpdlc.tooltips.rose_quartz_heart1.1":"每个种类为机械的器官，会为你添加2点生命值上限",
+    "hpdlc.tooltips.rose_quartz_heart1.2":"每个种类为玫瑰的器官，会为你添加1点攻击力",
+
     "item.hpdlc.wither_rose_quartz_heart":"凋零玫瑰心脏",
     "hpdlc.tooltips.wither_rose_quartz_heart.1":"每个种类为玫瑰的器官，会为你添加1点生命值上限",
 
@@ -417,6 +421,11 @@
 
     "item.hpdlc.windmill_bearing1":"风车轴承",
     "hpdlc.tooltips.windmill_bearing1":"如果器官周围有风帆，每秒增加8资源点",
+
+    "item.hpdlc.thermostat":"恒温器",
+    "hpdlc.tooltips.thermostat.1":"空调？",
+    "hpdlc.tooltips.thermostat.2":"如果体温大于50消耗25资源点，使体温变为0",
+    "hpdlc.tooltips.thermostat.3":"如果体温小于负50消耗25资源点，使体温变为0",
 
     "item.hpdlc.chicken_liver":"肝型麦乐鸡",
     "hpdlc.tooltips.chicken_liver.1":"每一点幸运属性，每秒有百分之2的概率清除自身debff"
