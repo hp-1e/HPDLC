@@ -13,6 +13,7 @@
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: ["16431CB33B320C5C"]
 			id: "6694806EA857BDE6"
 			rewards: [
 				{
@@ -200,7 +201,7 @@
 				type: "dimension"
 			}]
 			title: "HP的玩家扩展包"
-			x: -23.25d
+			x: -23.5d
 			y: -0.75d
 		}
 		{
@@ -268,6 +269,11 @@
 			dependencies: ["4160D5214C40A294"]
 			description: ["获取常驻夜视的器官"]
 			id: "213C83EB9B6CEA0E"
+			rewards: [{
+				id: "4D4768FBF9B0F324"
+				item: "lightmanscurrency:coin_gold"
+				type: "item"
+			}]
 			tasks: [{
 				id: "59BB7FF0A149B84C"
 				item: {
@@ -908,15 +914,14 @@
 			y: 5.5d
 		}
 		{
-			description: ["强烈推荐看的一部分"]
+			description: ["强烈推荐看的一部分，涉及到此部分的任何问题我都不会回答"]
 			id: "16431CB33B320C5C"
 			tasks: [{
-				dimension: "minecraft:overworld"
-				id: "057FC2991054AE92"
-				type: "dimension"
+				id: "40F21198E745784C"
+				type: "checkmark"
 			}]
 			title: "强烈推荐看的一部分"
-			x: -23.0d
+			x: -23.5d
 			y: 6.25d
 		}
 		{
@@ -963,7 +968,7 @@
 			description: ["如果器官没有丢失过的话，不推荐重复兑换"]
 			id: "38D97FD76E77B5E6"
 			rewards: [{
-				id: "6AB39DBA4335C5F0"
+				id: "1D7DFBB8ED17CF2C"
 				item: {
 					Count: 1b
 					id: "kubejs:operation_box"
@@ -1031,6 +1036,12 @@
 								Count: 1b
 								Slot: 9b
 								id: "hpdlc:shengxiudejixiejirou"
+								tag: { }
+							}
+							{
+								Count: 1b
+								Slot: 10b
+								id: "hpdlc:thermostat"
 								tag: { }
 							}
 							{
@@ -1249,6 +1260,7 @@
 		{
 			dependencies: ["34BD7882DA8564BC"]
 			dependency_requirement: "one_started"
+			description: ["注意破损王冠和神之冠加大量幸运"]
 			id: "44E4966FE79D3111"
 			rewards: [{
 				count: 7
@@ -1327,6 +1339,7 @@
 		}
 		{
 			dependencies: ["34BD7882DA8564BC"]
+			description: ["注意破损王冠和神之冠加大量幸运"]
 			id: "12BDC08167231D02"
 			rewards: [{
 				id: "102F28D9C6A1765B"
@@ -1554,6 +1567,11 @@
 		{
 			dependencies: ["4160D5214C40A294"]
 			id: "198945B8981300BC"
+			rewards: [{
+				id: "5652AA07F833E867"
+				item: "lightmanscurrency:coin_gold"
+				type: "item"
+			}]
 			tasks: [{
 				id: "6041ACDEA6CC2E2A"
 				item: {
@@ -1583,7 +1601,7 @@
 				"建议搭配人肉宴食用"
 				"恶意碎片打凋零骷髅"
 				"黑暗宝珠打凋零,需要纳米昆虫打磨，纳米昆虫在锻造遗迹的锻造容器中"
-				"不洁之血大使徒"
+				"不洁之血打使徒"
 			]
 			id: "63BF0678695FFCF9"
 			rewards: [{
@@ -1624,26 +1642,6 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["4DC4D8CB48F42CA8"]
-			id: "5341DCE87806DF10"
-			rewards: [{
-				id: "19323CBCC20B964B"
-				item: "lightmanscurrency:coin_gold"
-				type: "item"
-			}]
-			tasks: [{
-				id: "0C0439C6B683DCFF"
-				item: {
-					Count: 1b
-					id: "hpdlc:cursed_heart"
-					tag: { }
-				}
-				type: "item"
-			}]
-			x: -16.5d
-			y: 3.0d
-		}
-		{
 			id: "37790BBA55D4A63A"
 			rewards: [{
 				count: 3
@@ -1652,11 +1650,6 @@
 				type: "item"
 			}]
 			tasks: [
-				{
-					id: "003995360DBCAFD3"
-					item: "create:large_water_wheel"
-					type: "item"
-				}
 				{
 					id: "4FCE3996DFC34735"
 					item: {
@@ -1671,6 +1664,15 @@
 					item: {
 						Count: 1b
 						id: "hpdlc:windmill_bearing1"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "1A15022B5AD3E93B"
+					item: {
+						Count: 1b
+						id: "hpdlc:large_water_wheel1"
 						tag: { }
 					}
 					type: "item"
@@ -1711,6 +1713,7 @@
 					type: "item"
 				}
 			]
+			title: "创造手术兑换"
 			x: -16.5d
 			y: 5.5d
 		}
@@ -1732,6 +1735,138 @@
 			}]
 			x: -18.5d
 			y: -3.0d
+		}
+		{
+			dependencies: ["4160D5214C40A294"]
+			description: ["以雷霆击碎黑暗！"]
+			id: "570B328EFC8B2038"
+			rewards: [{
+				count: 4
+				id: "3E1D5E5FB8B52521"
+				item: "lightmanscurrency:coin_gold"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "6D519E05118C0DED"
+					item: {
+						Count: 1b
+						id: "hpdlc:amplification_device_thunderbolt"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "3C61EFEC74E8DC86"
+					item: {
+						Count: 1b
+						id: "hpdlc:amplification_device_lightning_lance"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "6465B1DDC29AC93A"
+					item: {
+						Count: 1b
+						id: "hpdlc:amplification_device_thunderball"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "6AE2E4569001C3E4"
+					item: {
+						Count: 1b
+						id: "hpdlc:amplification_device_thunderstorm"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			x: -6.5d
+			y: -8.25d
+		}
+		{
+			dependencies: ["4160D5214C40A294"]
+			id: "0E2FD2A9CA8E1DE5"
+			rewards: [{
+				id: "7B2F5CCE73472E7D"
+				item: "lightmanscurrency:coin_gold"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5D341A49C02C122C"
+				item: {
+					Count: 1b
+					id: "hpdlc:lightning_rod1"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: -5.5d
+			y: -8.25d
+		}
+		{
+			dependencies: ["4160D5214C40A294"]
+			id: "6869BF3EB32CBF2B"
+			rewards: [{
+				id: "031636C1A85A780A"
+				item: "lightmanscurrency:coin_gold"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2E34B9E2CC30159C"
+				item: {
+					Count: 1b
+					id: "hpdlc:thermostat_hot"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: -5.5d
+			y: -6.75d
+		}
+		{
+			dependencies: ["4160D5214C40A294"]
+			description: ["细雪桶已增加配方"]
+			id: "08FE8B45B2B31500"
+			rewards: [{
+				id: "1151F0154247F8E1"
+				item: "lightmanscurrency:coin_gold"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0FBF4D99C6418961"
+				item: {
+					Count: 1b
+					id: "hpdlc:thermostat_cold"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: -4.5d
+			y: -8.25d
+		}
+		{
+			dependencies: ["4160D5214C40A294"]
+			id: "61561ADB58452289"
+			rewards: [{
+				id: "4AC77D4347901171"
+				item: "lightmanscurrency:coin_gold"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0F31A0A6AAA7636F"
+				item: {
+					Count: 1b
+					id: "hpdlc:oxygen_cylinder1"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: -4.5d
+			y: -6.75d
 		}
 	]
 	title: "HP的玩家拓展包"
