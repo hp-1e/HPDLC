@@ -6,8 +6,8 @@ StartupEvents.registry('minecraft:item', event => {
         .texture('hpdlc:item/bahui_eye')
         //最大堆叠
         .maxStackSize(1)
-        //
         .tag('curios:head')
+        .tag('curios:trinkets')
         .tag('itemborders:diamond')
         .attachCapability(CuriosCapabilityBuilder.CURIOS.itemStack()
         //能够装备
@@ -29,8 +29,10 @@ StartupEvents.registry('minecraft:item', event => {
             }))
 //风暴合金
 event.create("hpdlc:storm_metal_ingot","basic")
+.texture('hpdlc:item/wupin/storm_metal_ingot')
 //风暴之星
 event.create("hpdlc:withered_nether_star1","basic")
+.texture('hpdlc:item/wupin/withered_nether_star1')
 //大千录
 event.create('hpdlc:daqianlu', 'irons_spells_js:spellbook')
 .setMaxSpellSlots(15)
