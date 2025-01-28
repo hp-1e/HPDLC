@@ -1,4 +1,4 @@
-// priority: 9
+// priority: 10
 
 /**
  * 获取机械飞升点数
@@ -6,20 +6,17 @@
  * @returns {Number}
  */
 //借鉴墨染琴弦大佬的代码
-function maGetComputingPower(player) {
+function hpGetComputingPower(player) {
     if (!player) return 0;
     let typeMap = getPlayerChestCavityTypeMap(player)
     let count = 0
     let onlySet = new Set()
-    if (typeMap.has('kubejs:resource')) {
-        count += typeMap.get('kubejs:resource').length
         typeMap.get('kubejs:machine').forEach(organ => {
-            if (!onlySet.has(organ.id) && organ.id in maComputingPowerStrategies) {
+            if (!onlySet.has(organ.id) && organ.id in hpComputingPowerStrategies) {
                 onlySet.add(organ.id)
-                count += maComputingPowerStrategies[organ.id](player, organ)
+                count += hpComputingPowerStrategies[organ.id](player, organ)
             }
         });
-    }
     return count
 }
 
@@ -28,7 +25,7 @@ function maGetComputingPower(player) {
  * @constant
  * @type {Object<string,function(Internal.ServerPlayer,organ):number>}
  */
-const maComputingPowerStrategies = {
+const hpComputingPowerStrategies = {
     //机械肋骨左
     'hpdlc:mechanical_ribs_zuo': function (player, organ) {
         return 3
@@ -47,7 +44,7 @@ const maComputingPowerStrategies = {
     },
     //简陋红色熔炉
     'hpdlc:primitive_redstone_furnace': function (player, organ) {
-        return 3
+        return 2
     },
     //烈焰熔炉
     'hpdlc:flaming_furnace': function (player, organ) {
@@ -63,7 +60,7 @@ const maComputingPowerStrategies = {
     },
     //资源点库
     'hpdlc:energy_storage': function (player, organ) {
-        return 3
+        return 2
     },
     //喷气推进器（升级改良）
     'hpdlc:jet_propeller_gai': function (player, organ) {
@@ -103,7 +100,7 @@ const maComputingPowerStrategies = {
     },
     //精细机械手
     'hpdlc:precision_manipulator': function (player, organ) {
-        return 3
+        return 2
     },
     //增幅装置——红石
     'hpdlc:amplification_device_redstone': function (player, organ) {
@@ -137,6 +134,102 @@ const maComputingPowerStrategies = {
     'hpdlc:pulverizer1': function (player, organ) {
         return 3
     },
+    //增幅装置——雷霆
+    'hpdlc:amplification_device_thunderbolt': function (player, organ) {
+        return 3
+    },
+    //增幅装置——雷球
+    'hpdlc:amplification_device_thunderball': function (player, organ) {
+        return 3
+    },
+    //增幅装置——雷鸣长枪
+    'hpdlc:amplification_device_lightning_lances': function (player, organ) {
+        return 3
+    },
+    //增幅装置——闪电风暴
+    'hpdlc:amplification_device_thunderstorm': function (player, organ) {
+        return 3
+    },
+    //引雷针
+    'hpdlc:lightning_rod1': function (player, organ) {
+        return 3
+    },
+     //机械脊柱
+     'hpdlc:jixiejizhu': function (player, organ) {
+        return 1
+    },
+     //生锈的机械肋骨
+     'hpdlc:shengxiudejixiejirou': function (player, organ) {
+        return 1
+    },
+     //人造脾
+     'hpdlc:renzaopi': function (player, organ) {
+        return 1
+    },
+     //生锈的合金肋骨
+     'hpdlc:shengxiudehejinleiguzuo': function (player, organ) {
+        return 1
+    },
+     //破损的压缩氧气植入物
+     'hpdlc:posundeyasuoyangqizhiruwu': function (player, organ) {
+        return 1
+    },
+     //机械血泵
+     'hpdlc:jixiexuebeng': function (player, organ) {
+        return 1
+    },
+     //肝部过滤器
+     'hpdlc:ganbuguolvqi': function (player, organ) {
+        return 1
+    },
+     //生锈的合金肋骨
+    'hpdlc:shengxiudehejinleiguyou': function (player, organ) {
+        return 1
+    },
+     //透析器
+    'hpdlc:touxiqi': function (player, organ) {
+        return 1
+    },
+     //简陋工具箱
+     'hpdlc:toolbox': function (player, organ) {
+        return 2
+    },
+     //变速齿轮改
+     'hpdlc:toolbox': function (player, organ) {
+        return 2
+    },
+     //机械胃
+     'hpdlc:jixiewei': function (player, organ) {
+        return 2
+    },
+     //钢铁外壳
+    'hpdlc:steel_shell': function (player, organ) {
+        return 2
+    },
+     //采集锤
+     'hpdlc:chain_collection_hammer': function (player, organ) {
+        return 2
+    },
+     //温度调节器
+    'hpdlc:thermostat': function (player, organ) {
+        return 2
+    },
+     //机械肌肉
+    'hpdlc:jixiejirou': function (player, organ) {
+        return 2
+    },
+     //机械肋骨左
+    'hpdlc:hejinleiguzuo': function (player, organ) {
+        return 2
+    },
+     //机械肋骨右
+    'hpdlc:hejinleiguyuo': function (player, organ) {
+        return 2
+    },
+    //氧气罐
+    'hpdlc:oxygen_cylinder1': function (player, organ) {
+        return 3
+    },
     //新生维度
     'hpdlc:newborn_dimension': function (player, organ) {
         if (organ.tag?.hpdlcforgeTimes) {
@@ -153,20 +246,20 @@ const maComputingPowerStrategies = {
  * @param {Internal.ServerPlayer} player 
  * @returns {Number}
  */
-function mafoodGetComputingPower(player) {
+function hpfoodGetComputingPower(player) {
     if (!player) return 0;
     let typeMap = getPlayerChestCavityTypeMap(player)
     let count = 0
     let onlySet = new Set()
         typeMap.get('kubejs:food').forEach(organ => {
-            if (!onlySet.has(organ.id) && organ.id in mafoodComputingPowerStrategies) {
+            if (!onlySet.has(organ.id) && organ.id in hpfoodComputingPowerStrategies) {
                 onlySet.add(organ.id)
-                count += mafoodComputingPowerStrategies[organ.id](player, organ)
+                count += hpfoodComputingPowerStrategies[organ.id](player, organ)
             }
         });
     return count
 }
-const mafoodComputingPowerStrategies = {
+const hpfoodComputingPowerStrategies = {
     //肝
     'hpdlc:chicken_liver': function (player, organ) {
         return 1
@@ -201,6 +294,10 @@ const mafoodComputingPowerStrategies = {
     },
     //条
     'kubejs:chicken_strip': function (player, organ) {
+        return 1
+    },
+    //肋骨
+    'hpdlc:chicken_rib': function (player, organ) {
         return 1
     },
     //全家桶

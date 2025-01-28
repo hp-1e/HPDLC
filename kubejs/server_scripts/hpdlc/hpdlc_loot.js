@@ -10,7 +10,7 @@ const hpdlcEntityLootOnlyStrategies = {
     'hpdlc:micro_processing_factory': function (event, organ) {
         let player = event.getPlayer()
         let count = 1
-        let a = maGetComputingPower(player)
+        let a = hpGetComputingPower(player)
         while (a--) {
             if (Math.random() < 0.025) {
                 count++

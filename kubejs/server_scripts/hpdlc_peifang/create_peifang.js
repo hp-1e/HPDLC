@@ -102,7 +102,7 @@ event.recipes.create.sequenced_assembly([
   create.cutting(incomplete,incomplete),
   create.deploying(incomplete,[incomplete,'minecraft:wither_rose']),
   create.deploying(incomplete,[incomplete,'hpdlc:storm_metal_ingot']),
-]).transitionalItem(incomplete).loops(3)
+]).transitionalItem(incomplete).loops(1)
 
 //凋零玫瑰肝脏
 event.recipes.create.sequenced_assembly([
@@ -122,7 +122,7 @@ event.recipes.create.sequenced_assembly([
   create.cutting(incomplete,incomplete),
   create.deploying(incomplete,[incomplete,'minecraft:wither_rose']),
   create.deploying(incomplete,[incomplete,'hpdlc:storm_metal_ingot']),
-]).transitionalItem(incomplete).loops(3)
+]).transitionalItem(incomplete).loops(2)
 
 //玫瑰心脏——怀旧版
 event.recipes.create.sequenced_assembly([
@@ -153,7 +153,7 @@ event.recipes.create.sequenced_assembly([
   create.cutting(incomplete,incomplete),
   create.deploying(incomplete,[incomplete,'minecraft:wither_rose']),
   create.deploying(incomplete,[incomplete,'hpdlc:storm_metal_ingot']),
-]).transitionalItem(incomplete).loops(3)
+]).transitionalItem(incomplete).loops(2)
 
 //多功能机械臂
 event.recipes.create.sequenced_assembly([
@@ -227,6 +227,39 @@ create.mechanical_crafting('hpdlc:flaming_furnace',
     E:'bosses_of_mass_destruction:blazing_eye',
   }
 )
+
+//温度调节器(高温)
+create.mechanical_crafting('hpdlc:thermostat_hot',
+  [
+    'ABA',
+    'ACA',
+    'DED'
+  ],
+  {
+    A:'create:sturdy_sheet',
+    B:'irons_spellbooks:fireward_ring',
+    C:'nameless_trinkets:blaze_nucleus',
+    E:'kubejs:flame_stomach',
+    D:'create:brass_casing',
+  }
+)
+
+//温度调节器(低温)
+create.mechanical_crafting('hpdlc:thermostat_cold',
+  [
+    'ABA',
+    'ACA',
+    'DED'
+  ],
+  {
+    A:'create:sturdy_sheet',
+    B:'irons_spellbooks:frostward_ring',
+    C:'nameless_trinkets:ice_cube',
+    E:'kubejs:ice_piece',
+    D:'create:brass_casing',
+  }
+)
+
 //后备隐藏能源
 create.mechanical_crafting('hpdlc:hidden_reserve_energy',
   [
@@ -282,17 +315,17 @@ create.mechanical_crafting('hpdlc:fire_steam_powered_mechanical_arm',
     'DDD'
   ],
   {
-    A:'iceandfire:dragonsteel_fire_ingot',
+    A:'iceandfire:fire_dragon_blood',
     B:'create:fluid_tank',
     C:'hpdlc:steam_powered_mechanical_arm',
     D:'create:blaze_burner',
-    E:'cataclysm:ignitium_block',
+    E:'twilightforest:fiery_block',
   }
 )
 //凋零动力臂
 create.mechanical_crafting('hpdlc:storm_steam_powered_mechanical_arm',
   [
-    'AAA',
+    'EAE',
     'BCB',
     'DDD'
   ],
@@ -301,6 +334,7 @@ create.mechanical_crafting('hpdlc:storm_steam_powered_mechanical_arm',
     B:'create:fluid_tank',
     C:'hpdlc:fire_steam_powered_mechanical_arm',
     D:'minecraft:nether_star',
+    E:'hpdlc:storm_metal_plate1',
   }
 )
 //机械盾牌
@@ -367,6 +401,19 @@ create.mechanical_crafting('hpdlc:pulverizer1',
     A:'create:crushing_wheel',
     B:'kubejs:ore_lung',
     C:'create:hand_crank',
+  }
+)
+//引雷针
+create.mechanical_crafting('hpdlc:lightning_rod1',
+  [
+    'AAA',
+    'ABA',
+    'ACA'
+  ],
+  {
+    A:'minecraft:copper_block',
+    B:'nameless_trinkets:pocket_lightning_rod',
+    C:'createaddition:electric_motor',
   }
 )
 //微型分解工厂

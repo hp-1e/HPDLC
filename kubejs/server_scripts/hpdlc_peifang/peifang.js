@@ -39,22 +39,30 @@ ServerEvents.recipes(event => {
         ['createaddition:gold_wire','createaddition:gold_wire','createaddition:gold_wire']
     ]);
     //机械发条（改）
-    event.shaped('hpdlc:jixiefatiaogai',[
-        ['kubejs:machine_clockwork','',''],
-        [],
-        []
+    event.shapeless('hpdlc:jixiefatiaogai',[
+        ['kubejs:machine_clockwork'],
+    ]);
+    //细雪桶
+    event.shaped('minecraft:powder_snow_bucket',[
+        ['minecraft:bucket','minecraft:snowball'],
     ]);
     //水车
-    event.shapeless('hpdlc:water_wheel1',[
-        ['create:water_wheel'],
+    event.shaped('hpdlc:water_wheel1',[
+        ['minecraft:iron_ingot','minecraft:iron_ingot','minecraft:iron_ingot'],
+        ['minecraft:iron_ingot','create:water_wheel','minecraft:iron_ingot'],
+        ['minecraft:iron_ingot','minecraft:iron_ingot','minecraft:iron_ingot']
     ]);
     //大型水车
-     event.shapeless('hpdlc:large_water_wheel1',[
-        ['create:large_water_wheel'],
+    event.shaped('hpdlc:large_water_wheel1',[
+        ['minecraft:diamond','minecraft:diamond','minecraft:diamond'],
+        ['minecraft:diamond','hpdlc:water_wheel1','minecraft:diamond'],
+        ['minecraft:diamond','minecraft:diamond','minecraft:diamond']
     ]);
     //风车轴承
-    event.shapeless('hpdlc:windmill_bearing1',[
-        ['create:windmill_bearing'],
+    event.shaped('hpdlc:windmill_bearing1',[
+        ['create:white_sail','art_of_forging:forged_steel_ingot','create:white_sail'],
+        ['art_of_forging:forged_steel_ingot','create:windmill_bearing','art_of_forging:forged_steel_ingot'],
+        ['create:white_sail','art_of_forging:forged_steel_ingot','create:white_sail']
     ]);
     //变速齿轮（改）
     event.shaped('hpdlc:gearbox_gai',[
@@ -117,7 +125,7 @@ ServerEvents.recipes(event => {
     .input('goety:totem_of_roots')
     .input('kubejs:redstone_chipset')
     .input('hpdlc:xinpian')
-    .input('4x minecraft:netherite_block')
+    .input('2x minecraft:netherite_ingot')
     .input('64x createaddition:electrum_ingot')
     .itemOutput('hpdlc:cpu1')
     .sacrifice('minecraft:villager', 1)
@@ -129,15 +137,15 @@ ServerEvents.recipes(event => {
     event.recipes.summoningrituals
     .altar('kubejs:ritual_catalyst')
     .id('hpdlc:soul_chip')
-    .input('3x alexsmobs:soul_heart')
+    .input('alexsmobs:soul_heart')
     .input('art_of_forging:enigmatic_construct')
-    .input('3x bosses_of_mass_destruction:ancient_anima')
+    .input('bosses_of_mass_destruction:ancient_anima')
     .input('hpdlc:cpu1')
     .input('goety:arca')
     .input('goety:soul_ruby')
-    .input('8x bosses_of_mass_destruction:soul_star')
-    .input('8x art_of_forging:soul_ember')
-    .input('16x nameless_trinkets:unknown_fragment')
+    .input('2x bosses_of_mass_destruction:soul_star')
+    .input('2x art_of_forging:soul_ember')
+    .input('4x nameless_trinkets:unknown_fragment')
     .itemOutput('hpdlc:soul_chip')
     .sacrifice('minecraft:villager', 1)
     .sacrificeRegion(3, 3)
@@ -264,6 +272,7 @@ ServerEvents.recipes(event => {
     .itemOutput('hpdlc:chicken_family')
     .recipeTime(500);
 
+    /*
     //受咒之心
     event.recipes.summoningrituals
     //催化剂
@@ -277,7 +286,7 @@ ServerEvents.recipes(event => {
     .input('kubejs:heart_template')
     //输出
     .itemOutput('hpdlc:cursed_heart')
-    .recipeTime(500);
+    .recipeTime(500);*/
 
     //千咒之魂——改
     event.recipes.summoningrituals
@@ -320,7 +329,39 @@ ServerEvents.recipes(event => {
     function registerCustomRecipe(recipeModel) {
         event.custom(recipeModel)
     }
-
-    registerCustomRecipe(new WeaponInfusionRecipe(Item.of('hpdlc:amplification_device'), Item.of('goety:reinforced_redstone_block'),Item.of('hpdlc:amplification_device_redstone')))
-    registerCustomRecipe(new WeaponInfusionRecipe(Item.of('hpdlc:amplification_device'), Item.of('create:mechanical_saw'),Item.of('hpdlc:amplification_device_cutting')))
+    //增幅装置——红石
+    registerCustomRecipe(new WeaponInfusionRecipe(
+        Item.of('hpdlc:amplification_device'), 
+        Item.of('goety:reinforced_redstone_block'),
+        Item.of('hpdlc:amplification_device_redstone')))
+    //增幅装置——雷霆
+    registerCustomRecipe(new WeaponInfusionRecipe(
+        Item.of('hpdlc:amplification_device'),
+        Item.of('irons_spellbooks:lightning_bottle'),
+        Item.of('hpdlc:amplification_device_thunderbolt')))
+    //增幅装置——雷鸣长枪
+    registerCustomRecipe(new WeaponInfusionRecipe(
+        Item.of('hpdlc:amplification_device'),
+        Item.of('irons_spellbooks:lightning_rune'),
+        Item.of('hpdlc:amplification_device_lightning_lance')))
+    //增幅装置——闪电风暴
+    registerCustomRecipe(new WeaponInfusionRecipe(
+        Item.of('hpdlc:amplification_device'), 
+        Item.of('nameless_trinkets:pocket_lightning_rod'),
+        Item.of('hpdlc:amplification_device_thunderstorm')))
+    //增幅装置——雷球
+    registerCustomRecipe(new WeaponInfusionRecipe(
+        Item.of('hpdlc:amplification_device'), 
+        Item.of('irons_spellbooks:lightning_upgrade_orb'),
+        Item.of('hpdlc:amplification_device_thunderball')))
+    //增幅装置——切割
+    registerCustomRecipe(new WeaponInfusionRecipe(
+        Item.of('hpdlc:amplification_device'), 
+        Item.of('create:mechanical_saw'),
+        Item.of('hpdlc:amplification_device_cutting')))
+    //氧气罐
+    registerCustomRecipe(new WeaponInfusionRecipe(
+        Item.of('kubejs:compressed_oxygen_implant'), 
+        Item.of('create:netherite_backtank'),
+        Item.of('hpdlc:oxygen_cylinder1')))
 })

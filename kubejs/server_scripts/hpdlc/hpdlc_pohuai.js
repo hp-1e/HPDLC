@@ -97,7 +97,7 @@ const hpdlcorganBlockBrokenOnlyStrategies = {
                 amplifier = amplifier + typeMap.get('kubejs:machine').length}
         let count = player.persistentData.getInt(resourceCount)
         updateResourceCount(player, count + 1)
-        if (count >= 500 && Math.random() <= 0.05) {
+        if (count >= 100 && Math.random() <= 0.05) {
             player.give(Item.of('kubejs:rare_mineral_cluster').withCount(amplifier * 8))
             player.give(Item.of('kubejs:common_mineral_cluster').withCount(amplifier * 8))
             updateResourceCount(player, count + 1 - 100)

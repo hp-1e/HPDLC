@@ -58,6 +58,7 @@ const hpdlcorganPlayerBearOnlyStrategies = {
              source.getServer().scheduleInTicks(1, () => {
                  // 如果没有这个，会攻击到非生物实体，比如掉落物
                  if (source.isLiving()) {
+                    source.invulnerableTime = 0
                      // 攻击,DamageSource为伤害源，后一个数值是伤害数值
                      source.attack(DamageSource.playerAttack(player), event.amount)
                  }
@@ -165,7 +166,12 @@ const hpdlcorganPlayerBearOnlyStrategies = {
         })
             event.amount = event.amount * Math.max(0.2, (1 - curseType * 0.02 - allCurseLevel * 0.01))
     },
-
+//引雷针
+'hpdlc:lightning_rod1': function (event, organ, data) {
+    if (event.source.type != 'lightningBolt' ) return
+    let count = event.entity.persistentData.getInt(resourceCount)??0
+    updateResourceCount(event.entity, count + 300)
+}
 
 }
 

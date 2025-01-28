@@ -10,10 +10,9 @@ const hpdlcOrganPlayerDamageOnlyStrategies = {
  //测试
  'hpdlc:ceshi': function (event, organ, data) {
     let type = event.source.type
-        let amount = event.amount
-        let time = event.source.player.server.getTickCount()
-        
-        event.source.player.server.runCommandSilent(`say ${`造成伤害类型： ${type.toString()} ，伤害： ${amount.toString()} 点by ${time.toString()}Time`}`)    
+    let amount = event.amount
+    let time = event.source.player.server.getTickCount()
+    event.source.player.server.runCommandSilent(`say ${`造成伤害类型： ${type.toString()} ，伤害： ${amount.toString()} 点by ${time.toString()}Time`}`)    
 },
 //增幅装置——红石
 'hpdlc:amplification_device_redstone': function (event, organ, data) {
@@ -52,6 +51,36 @@ const hpdlcOrganPlayerDamageOnlyStrategies = {
                 event.amount = event.amount * (amplifier + (count / 100))
         }
     
+    },
+//增幅装置——雷球
+'hpdlc:amplification_device_thunderball': function (event, organ, data) {
+    if (event.source.type != 'irons_spellbooks.ball_lightning' ) return
+    let player = event.source.player
+    let count = player.persistentData.getInt(resourceCount)??0
+    let a = hpGetComputingPower(player)
+    if (count < a/10)return
+    event.amount = event.amount * (1+a)*(1+a)
+    updateResourceCount(player, count - Math.floor(a/10))
+    },
+//增幅装置——雷鸣长枪
+'hpdlc:amplification_device_lightning_lance': function (event, organ, data) {
+    if (event.source.type != 'irons_spellbooks.lightning_lance' ) return
+    let player = event.source.player
+    let count = player.persistentData.getInt(resourceCount)??0
+    let a = hpGetComputingPower(player)
+    if (count < a/10)return
+    event.amount = event.amount * (1+a)*(1+a)
+    updateResourceCount(player, count - Math.floor(a/10))
+    },
+//增幅装置——闪电风暴
+'hpdlc:amplification_device_thunderstorm': function (event, organ, data) {
+    if (event.source.type != 'irons_spellbooks.thunderstorm' ) return
+    let player = event.source.player
+    let count = player.persistentData.getInt(resourceCount)??0
+    let a = hpGetComputingPower(player)
+    if (count < a/10)return
+    event.amount = event.amount * (1+a)
+    updateResourceCount(player, count - Math.floor(a/10))
     },
 //高级雷龙心脏
 'hpdlc:lightning_dragon_heart1': function (event, organ, data) {
@@ -125,6 +154,7 @@ const hpdlcOrganPlayerDamageOnlyStrategies = {
 			if (entity.isLiving()) {
 				// 延迟一刻执行，这样可以让训练假人正常显示伤害
 				entity.getServer().scheduleInTicks(1, () => {
+                    event.entity.invulnerableTime = 0
 					// 攻击,DamageSource为伤害源，后一个数值是伤害数值
 					entity.attack(DamageSource.playerAttack(player), a / 2)
 				})
@@ -205,7 +235,7 @@ const hpdlcOrganPlayerDamageOnlyStrategies = {
         return
     }
     player.addItemCooldown(organ.id, 2)
-    updateResourceCount(player, count - 50)}
+    updateResourceCount(player, count - 20)}
     },
 //凋零动力臂
 'hpdlc:storm_steam_powered_mechanical_arm': function (event, organ, data) {
@@ -217,7 +247,7 @@ const hpdlcOrganPlayerDamageOnlyStrategies = {
         return
     }
     player.addItemCooldown(organ.id, 2)
-    updateResourceCount(player, count - 70)}
+    updateResourceCount(player, count -30)}
     },
 //喷气推进器（升级改良）
 'hpdlc:jet_propeller_gai': function (event, organ, data) {
@@ -242,24 +272,20 @@ const hpdlcOrganPlayerDamageOnlyStrategies = {
     player.addItemCooldown(organ.id, 10)
     player.setFoodLevel(Math.max(player.getFoodLevel() - 3, 0))
     },
-//受咒之心
-'hpdlc:cursed_heart': function (event, organ, data) {
-    let player = event.source.player
-    let itemList = [player.getMainHandItem(), player.getOffHandItem(), player.getHeadArmorItem(),
-        player.getChestArmorItem(), player.getLegsArmorItem(), player.getFeetArmorItem()]
-        let curseType = 0
-        let allCurseLevel = 0
-        itemList.forEach(item => {
-            item.enchantments.forEach((name, level) => {
-                if (curseEnchantList.some(ele => ele == name)) {
-                    curseType = curseType + 1
-                    allCurseLevel = allCurseLevel + level
-                }
-            })
-        })
-    event.amount =event.amount * (1 + curseType * 0.01 + allCurseLevel * 0.005)
-    },
-
+//僵尸之心
+'hpdlc:zombie_heart': function (event,organ) {
+    let entity = event.entity
+    if (entity.hasEffect('minecraft:poison')) {
+        // 获取已有的效果
+        let effect = entity.getEffect('minecraft:poison')
+        // 获取效果等级
+        let amplifier = effect.getAmplifier()
+        entity.potionEffects.add('minecraft:poison', 20 * 5,amplifier + 1)
+    }
+    else{
+        entity.potionEffects.add('minecraft:poison', 20 * 5,0)
+    }
+}
 
 
 

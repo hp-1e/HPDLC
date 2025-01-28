@@ -119,48 +119,6 @@ const  hpdlcorganPlayerTickStrategies = {
             }
         }
         },
-    //水车
-    'hpdlc:water_wheel1': function (event, organ) {
-        let player = event.player
-        let count = player.persistentData.getInt(resourceCount)
-		let pos = organ.Slot
-		let posMap = getPlayerChestCavityPosMap(player);
-		fourDirectionList.forEach(direction => {
-			let currentPos = lookPos(direction, pos)
-			if (posMap.has(currentPos) && posMap.get(currentPos).id == 'minecraft:water_bucket') {
-				updateResourceCount(player, count + 2)
-			}
-		})
-        
-    },
-     //大型水车
-    'hpdlc:large_water_wheel1': function (event, organ) {
-        let player = event.player
-        let count = player.persistentData.getInt(resourceCount)
-		let pos = organ.Slot
-		let posMap = getPlayerChestCavityPosMap(player);
-		fourDirectionList.forEach(direction => {
-			let currentPos = lookPos(direction, pos)
-			if (posMap.has(currentPos) && posMap.get(currentPos).id == 'minecraft:water_bucket') {
-				updateResourceCount(player, count + 4)
-			}
-		})
-        
-    },
-     //风车轴承
-     'hpdlc:windmill_bearing1': function (event, organ) {
-        let player = event.player
-        let count = player.persistentData.getInt(resourceCount)
-		let pos = organ.Slot
-		let posMap = getPlayerChestCavityPosMap(player);
-		fourDirectionList.forEach(direction => {
-			let currentPos = lookPos(direction, pos)
-			if (posMap.has(currentPos) && posMap.get(currentPos).id == 'create:white_sail') {
-				updateResourceCount(player, count + 8)
-			}
-		})
-        
-    },
 }
 var assign_organ_player_player_tick = Object.assign( organPlayerTickStrategies,  hpdlcorganPlayerTickStrategies)
 
@@ -188,16 +146,16 @@ const hpdlcOrganPlayerTickOnlyStrategies = {
     let count = player.persistentData.getInt(resourceCount) ?? 0
     let maxcount = player.persistentData.getInt(resourceCountMax) ?? defaultResourceMax
     if (count < 50)return
-        if (count >= 150 && count >= maxcount * 0.8){
-            updateResourceCount(player, count - 150)
+        if (count >= 100 && count >= maxcount * 0.8){
+            updateResourceCount(player, count - 100)
             player.potionEffects.add('kubejs:flaring_heart', 20 * 2, 2)
         }
-        if (count > 100 && 0.5 * maxcount < count && count < maxcount * 0.8){
-            updateResourceCount(player, count - 100)
+        if (count > 50 && 0.5 * maxcount < count && count < maxcount * 0.8){
+            updateResourceCount(player, count - 50)
             player.potionEffects.add('kubejs:flaring_heart', 20 * 2, 1)
         }
-        if (50 <= count && count <= maxcount * 0.5){
-            updateResourceCount(player, count - 50)
+        if (25 <= count && count <= maxcount * 0.5){
+            updateResourceCount(player, count - 25)
             player.potionEffects.add('kubejs:flaring_heart', 20 * 2, 0)
         }
 
@@ -211,7 +169,7 @@ const hpdlcOrganPlayerTickOnlyStrategies = {
         if (typeMap.has('kubejs:resource')) {
             amplifier = typeMap.get('kubejs:resource').length
  }
-          let a = Math.floor (amplifier / 3);
+          let a = Math.floor (amplifier / 9);
            if(count >= a){
             if (player.health != player.maxHealth && player.health < player.maxHealth) {
                 player.heal(a)
@@ -229,7 +187,7 @@ const hpdlcOrganPlayerTickOnlyStrategies = {
     'hpdlc:cleaning_device':function(event,organ){
     let entity = event.entity
     let player = event.player
-    let a = maGetComputingPower(player)
+    let a = hpGetComputingPower(player)
     let harmfulEffects = []
     let random = Math.random() * 100
     if ( random <= a * 2){
@@ -253,21 +211,7 @@ const hpdlcOrganPlayerTickOnlyStrategies = {
             if (player.health != player.maxHealth && player.health < player.maxHealth) {
                 player.heal(1)
                 updateResourceCount(event.entity, count - 2)
-                if (player.hasEffect('farmersdelight:nourishment')) {
-                    // 获取已有的滋养效果
-                    let effect = player.getEffect('farmersdelight:nourishment')
-                    // 获取效果等级
-                    let amplifier = effect.getAmplifier()
-                    // 获取效果时长
-                    let duration = effect.getDuration()
-                    // 增加效果
-                    player.potionEffects.add('farmersdelight:nourishment', duration + 20 * 3, amplifier)
-                }
-                // 否则执行以下逻辑
-                else {
-                    // 增加效果
-                    player.potionEffects.add('farmersdelight:nourishment', 20 * 3, 0)
-                }
+                player.potionEffects.add('farmersdelight:nourishment', 20 * 3, 0)
             }
             }
 },
@@ -348,9 +292,9 @@ const hpdlcOrganPlayerTickOnlyStrategies = {
 'hpdlc:chicken_intestine':function(event,organ){
     let player = event.player
     let luck = Math.max(player.getLuck(), 1)
-    event.player.setFoodLevel(Math.min(event.player.getFoodLevel() + luck/20, 20))
+    event.player.setFoodLevel(Math.min(event.player.getFoodLevel() + luck/20/3.3, 20))
         if(Math.random() * (100 + luck) < 50 ){
-            event.player.setSaturation(Math.max(event.player.getSaturation() - Math.max((100- luck/10),0), 0))}
+            event.player.setSaturation(Math.max(event.player.getSaturation() - 2, 0))}
 },
 //人肉宴
 'hpdlc:man_met':function(event,organ){
@@ -442,7 +386,7 @@ const hpdlcOrganPlayerTickOnlyStrategies = {
         updateResourceCount(player, count - 30)
     }
 },
-//恒温器
+//温度调节器
 'hpdlc:thermostat': function (event,organ) {
     let player = event.entity
     let count = player.persistentData.getInt(resourceCount)
@@ -451,6 +395,61 @@ const hpdlcOrganPlayerTickOnlyStrategies = {
     if(temperature < 50 && temperature > -50)return
         ColdSweat.setTemperature(player, 'core', 0)
         updateResourceCount(player, count - 25)
+},
+//温度调节器(高温)
+'hpdlc:thermostat_hot': function (event,organ) {
+    let player = event.entity
+    player.potionEffects.add('minecraft:fire_resistance', 20 * 3, 0)
+},
+//温度调节器(低温)
+'hpdlc:thermostat_cold': function (event,organ) {
+    let player = event.entity
+    player.potionEffects.add('cold_sweat:ice_resistance', 20 * 3, 0)
+},
+//水车
+'hpdlc:water_wheel1': function (event, organ) {
+    let player = event.player
+    let count = player.persistentData.getInt(resourceCount)
+    let pos = organ.Slot
+    let posMap = getPlayerChestCavityPosMap(player);
+    fourDirectionList.forEach(direction => {
+        let currentPos = lookPos(direction, pos)
+        if (posMap.has(currentPos) && posMap.get(currentPos).id == 'minecraft:water_bucket') {
+            updateResourceCount(player, count + 4)
+        }
+    })
+    
+},
+//大型水车
+'hpdlc:large_water_wheel1': function (event, organ) {
+    let player = event.player
+    let count = player.persistentData.getInt(resourceCount)
+    let pos = organ.Slot
+    let posMap = getPlayerChestCavityPosMap(player);
+    fourDirectionList.forEach(direction => {
+        let currentPos = lookPos(direction, pos)
+        if (posMap.has(currentPos) && posMap.get(currentPos).id == 'minecraft:water_bucket') {
+            updateResourceCount(player, count + 8)
+        }
+    })
+    
+},
+//风车轴承
+'hpdlc:windmill_bearing1': function (event, organ) {
+    let player = event.player
+    let count = player.persistentData.getInt(resourceCount)
+    updateResourceCount(player, count + 16)
+},
+//氧气罐
+'hpdlc:oxygen_cylinder1': function (event, organ) {
+    let player = event.player
+    let count = player.persistentData.getInt(resourceCount)
+    if (player.nbt?.ForgeCaps['goety:lichdom']?.lichdom == 1) return
+    let oldAirSupply = player.getAirSupply()
+    if (oldAirSupply <= 150 && count >= 10) {
+        player.setAirSupply(150)
+        updateResourceCount(player, count - 10)
+    }
 },
 
 
