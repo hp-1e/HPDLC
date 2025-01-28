@@ -1,7 +1,7 @@
 {
-    "item.hpdlc.bahui_eye":"巴虺之眼",
+    "item.hpdlc.bahui_eye":"巴虺之眼(未完成)",
     "item.hpdlc.storm_metal_ingot":"风暴合金",
-    "item.hpdlc.daqianlu":"大千录",
+    "item.hpdlc.daqianlu":"大千录（未完成）",
     "item.hpdlc.withered_nether_star1":"风暴之星—赝品",
     "item.hpdlc.storm_metal_plate1":"风暴金属板—赝品",
     "hpdlc.dragon_attack":"龙袭",
@@ -17,6 +17,9 @@
     "hpdlc.tooltips.ceshi":"不要出错",
 
     "hpdlc.tooltips.jixiefeisheng":"机械飞升进度+3（此效果唯一）",
+    "hpdlc.tooltips.jixiefeisheng.2":"机械飞升进度+2（此效果唯一）",
+    "hpdlc.tooltips.jixiefeisheng.1":"机械飞升进度+1（此效果唯一）",
+    
     "hpdlc.tooltips.wither_rose":"凋零之力正在侵蚀你",
     "hpdlc.tooltips.wither_storm":"凋零风暴的力量正在侵蚀你，但同时给你带来了强大的力量",
 
@@ -81,17 +84,16 @@
     "item.hpdlc.cpu1":"中枢芯片",
     "hpdlc.tooltips.cpu1.1":"你已经更进一步摆脱孱弱的肉体，并且能激活，统筹全身机械器官，为你提供加成",
     "hpdlc.tooltips.cpu1.2":"在关闭器官界面自动触发激活效果",
-    "hpdlc.tooltips.cpu1.3":"每个种类为机械的器官，会为你添加3点基础攻击力",
-    "hpdlc.tooltips.cpu1.4":"每个种类为机械的器官，会为你添加3点基础生命上限",
-    "hpdlc.tooltips.cpu1.5":"每个种类为机械的器官，会为你添加20点资源点上限",
+    "hpdlc.tooltips.cpu1.3":"每点机械飞升进度，会为你添加3点基础攻击力",
+    "hpdlc.tooltips.cpu1.4":"每点机械飞升进度，会为你添加3点基础生命上限",
+    "hpdlc.tooltips.cpu1.5":"每点机械飞升进度，会为你添加20点资源点上限",
 
     "item.hpdlc.soul_chip":"灵魂芯片",
     "hpdlc.tooltips.soul_chip.1":"你已经成功摆脱了孱弱的躯体",
     "hpdlc.tooltips.soul_chip.2":"在关闭器官界面自动触发激活效果",
-    "hpdlc.tooltips.soul_chip.3":"每点机械飞升进度，会为你添加5点基础攻击力",
-    "hpdlc.tooltips.soul_chip.4":"每点机械飞升进度，会为你添加5点基础生命上限",
+    "hpdlc.tooltips.soul_chip.3":"每点机械飞升进度，会为你添加4点基础攻击力",
+    "hpdlc.tooltips.soul_chip.4":"每点机械飞升进度，会为你添加4点基础生命上限",
     "hpdlc.tooltips.soul_chip.5":"每点机械飞升进度，会为你添加50点资源点上限",
-    "hpdlc.tooltips.soul_chip.6":"每个种类为资源的器官，会为你添加1点机械飞升进度",
 
     "item.hpdlc.jixiefatiaogai":"机械发条（改）",
     "hpdlc.tooltips.jixiefatiaogai.1":"前期获取资源点最好的手段",
@@ -124,13 +126,16 @@
 
     "item.hpdlc.flaming_furnace":"烈焰熔炉",
     "hpdlc.tooltips.flaming_furnace.1":"焚尽！",
-    "hpdlc.tooltips.flaming_furnace.2":"手持烈焰棒右键以直接获取500资源点数",
+    "hpdlc.tooltips.flaming_furnace.2":"手持烈焰棒右键以直接获取1000资源点数",
     "hpdlc.tooltips.flaming_furnace.3":"增加100资源点上限",
 
     "item.hpdlc.jet_propeller_gai":"喷气推进器（升级改良）",
     "hpdlc.tooltips.jet_propeller_gai.1":"隐藏在机体的喷气推进器正在给你的永恒之翼加速",
     "hpdlc.tooltips.jet_propeller_gai.2":"能让你飞行",
     "hpdlc.tooltips.jet_propeller_gai.3":"飞行时造成的伤害减少,并且每秒减少30资源点",
+
+    "item.hpdlc.xirang":"息壤",
+    "hpdlc.tooltips.xirang":"一块普普通通的泥土？",
 
     "item.hpdlc.magic_monverter":"魔力转化器",
     "hpdlc.tooltips.magic_monverter.1":"将魔力转化为资源点",
@@ -142,9 +147,9 @@
 
     "item.hpdlc.small_burning_heart":"微型心火核心",
     "hpdlc.tooltips.small_burning_heart.1":"我将点燃心海",
-    "hpdlc.tooltips.small_burning_heart.2":"资源点大于百分之80，每秒消耗150资源点，并获取3级心火buff",
-    "hpdlc.tooltips.small_burning_heart.3":"资源点大于百分之50，每秒消耗100资源点，并获取2级心火buff",
-    "hpdlc.tooltips.small_burning_heart.4":"资源点大于50，每秒消耗50资源点，并获取1级心火buff",
+    "hpdlc.tooltips.small_burning_heart.2":"资源点大于百分之80，每秒消耗100资源点，并获取3级心火buff",
+    "hpdlc.tooltips.small_burning_heart.3":"资源点大于百分之50，每秒消耗50资源点，并获取2级心火buff",
+    "hpdlc.tooltips.small_burning_heart.4":"资源点大于25，每秒消耗25资源点，并获取1级心火buff",
 
     "item.hpdlc.hidden_reserve_energy":"后备隐藏能源",
     "hpdlc.tooltips.hidden_reserve_energy.1":"他妈的跟你爆了！",
@@ -157,32 +162,37 @@
 
     "item.hpdlc.steam_powered_mechanical_arm":"动力臂",
     "hpdlc.tooltips.steam_powered_mechanical_arm.1":"直至一切，燃烧殆尽",
-    "hpdlc.tooltips.steam_powered_mechanical_arm.2":"每个种类为资源的器官，会为你增加百分之2伤害值",
+    "hpdlc.tooltips.steam_powered_mechanical_arm.2":"每点机械飞升进度，会为你增加百分之4伤害值",
     "hpdlc.tooltips.steam_powered_mechanical_arm.3":"每秒消耗2点资源点供能",
     "hpdlc.tooltips.steam_powered_mechanical_arm.4":"如果资源点不足，将变得虚弱",
+    "hpdlc.tooltips.steam_powered_mechanical_arm.5":"如果存在龙炎动力臂/凋零动力臂激活效果将失效",
 
     "item.hpdlc.fire_steam_powered_mechanical_arm":"龙炎动力臂",
     "hpdlc.tooltips.fire_steam_powered_mechanical_arm.1":"直至一切，燃烧殆尽",
     "hpdlc.tooltips.fire_steam_powered_mechanical_arm.2":"每点机械飞升进度，会为你增加百分之5伤害值",
-    "hpdlc.tooltips.fire_steam_powered_mechanical_arm.5":"每次攻击消耗50资源点",
+    "hpdlc.tooltips.fire_steam_powered_mechanical_arm.5":"每次攻击消耗20资源点",
     "hpdlc.tooltips.fire_steam_powered_mechanical_arm.3":"每秒消耗4点资源点供能",
     "hpdlc.tooltips.fire_steam_powered_mechanical_arm.4":"如果资源点不足，将变得虚弱,造成的伤害减少百分之50",
+    "hpdlc.tooltips.fire_steam_powered_mechanical_arm.6":"如果存在凋零动力臂激活效果将失效",
 
     "item.hpdlc.storm_steam_powered_mechanical_arm":"凋零动力臂",
     "hpdlc.tooltips.storm_steam_powered_mechanical_arm.1":"凋零之力正在侵蚀你",
-    "hpdlc.tooltips.storm_steam_powered_mechanical_arm.2":"每点机械飞升进度，会为你增加百分之10伤害值",
-    "hpdlc.tooltips.storm_steam_powered_mechanical_arm.5":"每次攻击消耗70资源点",
+    "hpdlc.tooltips.storm_steam_powered_mechanical_arm.2":"每点机械飞升进度，会为你增加百分之6伤害值",
+    "hpdlc.tooltips.storm_steam_powered_mechanical_arm.5":"每次攻击消耗30资源点",
     "hpdlc.tooltips.storm_steam_powered_mechanical_arm.3":"每秒消耗8点资源点供能",
     "hpdlc.tooltips.storm_steam_powered_mechanical_arm.4":"如果资源点不足，你将遭受凋零的侵蚀，造成的伤害减少百分之50",
 
     "item.hpdlc.nanorepair_insect":"纳米修复昆虫",
     "hpdlc.tooltips.nanorepair_insect.1":"纳米类虫体在锻造遗迹中的锻造容器中获取，锻造容器有三页",
-    "hpdlc.tooltips.nanorepair_insect.2":"每3个种类为资源的器官，每秒恢复1生命值，并且消耗1资源点数",
+    "hpdlc.tooltips.nanorepair_insect.2":"每9个种类为资源的器官，每秒恢复1生命值，并且消耗1资源点数",
 
     "item.hpdlc.precision_manipulator":"精细机械手",
     "hpdlc.tooltips.precision_manipulator.1":"能够精准采集几乎所有方块",
 
     "item.hpdlc.amplification_device":"基础增幅装置",
+
+    "item.hpdlc.amplification_device_thunderbolt":"增幅装置—雷霆",
+    "hpdlc.tooltips.amplification_device_thunderbolt.1":"每有一点机械飞升进度，增加0.1雷系法强",
 
     "item.hpdlc.amplification_device_redstone":"增幅装置—红石",
     "hpdlc.tooltips.amplification_device_redstone.1":"副手为激光加特林时，主手tetra武器带迅捷属性时",
@@ -190,16 +200,29 @@
     "hpdlc.tooltips.amplification_device_redstone.3":"每3个种类为资源的器官，造成的伤害提升1倍",
     "hpdlc.tooltips.amplification_device_redstone.4":"每3个种类为机械的器官，造成的伤害提升1倍",
 
+
     "item.hpdlc.amplification_device_cutting":"增幅装置—切割",
     "hpdlc.tooltips.amplification_device_cutting.1":"主手为绞肉锯时",
     "hpdlc.tooltips.amplification_device_cutting.2":"根据当前资源点增幅伤害，每100点资源点增幅1倍伤害",
     "hpdlc.tooltips.amplification_device_cutting.3":"每1个种类为资源的器官，造成的伤害提升1倍",
     "hpdlc.tooltips.amplification_device_cutting.4":"每1个种类为机械的器官，造成的伤害提升1倍",
 
+    "item.hpdlc.amplification_device_thunderball":"增幅装置—雷球",
+    "hpdlc.tooltips.amplification_device_thunderball.1":"使用ball lightning法术时，根据机械飞升进度增加造成的伤害",
+    "hpdlc.tooltips.amplification_device_thunderball.2":"同时消耗机械飞升进度除10的资源点",
+
+    "item.hpdlc.amplification_device_lightning_lance":"增幅装置—雷鸣长枪",
+    "hpdlc.tooltips.amplification_device_lightning_lance.1":"使用雷鸣长枪法术时，根据机械飞升进度增加造成的伤害",
+    "hpdlc.tooltips.amplification_device_lightning_lance.2":"同时消耗机械飞升进度除10的资源点",
+
+    "item.hpdlc.amplification_device_thunderstorm":"增幅装置—闪电风暴",
+    "hpdlc.tooltips.amplification_device_thunderstorm.1":"使用lightning_storm法术时，根据机械飞升进度增加造成的伤害",
+    "hpdlc.tooltips.amplification_device_thunderstorm.2":"同时消耗机械飞升进度除10的资源点",
+
     "item.hpdlc.steel_shell":"钢铁外壳",
     "hpdlc.tooltips.steel_shell.1":"钢铁史蒂夫！",
     "hpdlc.tooltips.steel_shell.2":"缝缝补补又一年",
-    "hpdlc.tooltips.steel_shell.3":"手持铁锭右键恢复“铁修复”数值大小*3的生命",
+    "hpdlc.tooltips.steel_shell.3":"手持铁锭右键恢复“铁修复”数值大小的生命",
     "hpdlc.tooltips.steel_shell.4":"力的作用是相互的！",
     "hpdlc.tooltips.steel_shell.5":"受到伤害，使攻击者受到同样的伤害",
 
@@ -256,28 +279,29 @@
     "hpdlc.tooltips.rose_quartz_spine.1":"每个种类为玫瑰的器官，会为你添加1神经效率",
 
     "item.hpdlc.wither_rose_quartz_muscle":"凋零玫瑰肌束",
-    "hpdlc.tooltips.wither_rose_quartz_muscle.1":"每个种类为玫瑰的器官，会为你添加1点攻击力",
+    "hpdlc.tooltips.wither_rose_quartz_muscle.1":"每个种类为玫瑰的器官，会为你添加0.75点攻击力",
 
     "item.hpdlc.storm_rose_quartz_muscle":"风暴玫瑰肌束",
-    "hpdlc.tooltips.storm_rose_quartz_muscle.1":"每个种类为玫瑰的器官，会为你添加5点攻击力(非唯一激活)",
+    "hpdlc.tooltips.storm_rose_quartz_muscle.1":"每个种类为玫瑰的器官，会为你添加1.5点攻击力(非唯一激活)",
+    "hpdlc.tooltips.storm_rose_quartz_muscle.4":"如果存在墨染琴弦的拓展包的玫瑰“花语”处理器，上述加成翻四倍",
     "hpdlc.tooltips.storm_rose_quartz_muscle.2":"你正在遭受凋零风暴的侵蚀",
-    "hpdlc.tooltips.storm_rose_quartz_muscle.3":"每个种类为风暴的器官，将会减少百分之1的生命上限（唯一激活）",
+    "hpdlc.tooltips.storm_rose_quartz_muscle.3":"每个种类为风暴的器官，将会减少百分之2的生命上限（唯一激活）",
 
     "item.hpdlc.wither_rose_quartz_liver":"凋零玫瑰肝脏",
-    "hpdlc.tooltips.wither_rose_quartz_liver.1":"每个种类为玫瑰的器官，会为你添加40点魔法值上限",
+    "hpdlc.tooltips.wither_rose_quartz_liver.1":"每个种类为玫瑰的器官，会为你添加30点魔法值上限",
 
     "item.hpdlc.storm_rose_quartz_liver":"风暴玫瑰肝脏",
-    "hpdlc.tooltips.storm_rose_quartz_liver.1":"每个种类为玫瑰的器官，会为你添加200点魔法值上限",
+    "hpdlc.tooltips.storm_rose_quartz_liver.1":"每个种类为玫瑰的器官，会为你添加60点魔法值上限",
 
     "item.hpdlc.rose_quartz_heart1":"玫瑰心脏—怀旧版",
     "hpdlc.tooltips.rose_quartz_heart1.1":"每个种类为机械的器官，会为你添加2点生命值上限",
     "hpdlc.tooltips.rose_quartz_heart1.2":"每个种类为玫瑰的器官，会为你添加1点攻击力",
 
     "item.hpdlc.wither_rose_quartz_heart":"凋零玫瑰心脏",
-    "hpdlc.tooltips.wither_rose_quartz_heart.1":"每个种类为玫瑰的器官，会为你添加1点生命值上限",
+    "hpdlc.tooltips.wither_rose_quartz_heart.1":"每个种类为玫瑰的器官，会为你添加0.75点生命值上限",
 
     "item.hpdlc.storm_rose_quartz_heart":"风暴玫瑰心脏",
-    "hpdlc.tooltips.storm_rose_quartz_heart.1":"每个种类为玫瑰的器官，会为你添加5点生命值上限",
+    "hpdlc.tooltips.storm_rose_quartz_heart.1":"每个种类为玫瑰的器官，会为你添加1.5点生命值上限",
 
     "item.hpdlc.micro_processing_factory":"微型分解工厂",
     "hpdlc.tooltips.micro_processing_factory.1":"每点机械飞升进度，增加百分之2.5的概率使掉落物加一（每层概率独立触发）",
@@ -286,6 +310,7 @@
     "item.hpdlc.zombie_heart":"僵尸之心",
     "hpdlc.tooltips.zombie_heart.1":"它还在微弱的跳动",
     "hpdlc.tooltips.zombie_heart.2":"移除自身中毒buff",
+    "hpdlc.tooltips.zombie_heart.3":"每次攻击使敌人中毒，并增加一级buff等级",
     
     "item.hpdlc.soul_fire":"魂火——骷髅",
     "hpdlc.tooltips.soul_fire.1":"蕴含着小白毕生的技艺",
@@ -386,20 +411,21 @@
     "hpdlc.tooltips.primordial_hungry.6":"如果饥饿值不够，祂将吞噬你",
 
     "item.hpdlc.chuansuo":"穿梭器",
-    "hpdlc.tooltips.chuansuo":"按下主动技能按键，消耗500资源点，变为旁观模式，持续1分钟",
+    "hpdlc.tooltips.chuansuo.1":"按下主动技能按键，消耗500资源点，变为旁观模式，持续1分钟",
+    "hpdlc.tooltips.chuansuo.2":"按下主动技能按键，如果处于旁观模式，变为生存模式模式",
 
     "item.hpdlc.cursed_heart":"受咒之心",
     "hpdlc.tooltips.cursed_heart.1":"你受到了诅咒",
-    "hpdlc.tooltips.cursed_heart.2":"盔甲主副手武器每级诅咒增加百分之1的伤害",
-    "hpdlc.tooltips.cursed_heart.3":"盔甲主副手武器每种诅咒增加百分之0.5的伤害",
+    "hpdlc.tooltips.cursed_heart.2":"盔甲主副手武器每级诅咒增加0.01的法强",
+    "hpdlc.tooltips.cursed_heart.3":"盔甲主副手武器每种诅咒增加0.15的法强",
 
     "item.hpdlc.pulverizer1":"粉碎机",
-    "hpdlc.tooltips.pulverizer1.1":"诅咒缠身，悲风满路",
+    "hpdlc.tooltips.pulverizer1.1":"圆石生万物",
     "hpdlc.tooltips.pulverizer1.2":"挖掘石头时掉落矿蔟，并且消耗100资源点",
     "hpdlc.tooltips.pulverizer1.3":"掉落矿蔟的数量与机械器官的数量相关",
 
     "item.hpdlc.cursed_soul_gai":"千咒之魂—改",
-    "hpdlc.tooltips.cursed_soul_gai.1":"圆石生万物",
+    "hpdlc.tooltips.cursed_soul_gai.1":"诅咒缠身，悲风满路",
     "hpdlc.tooltips.cursed_soul_gai.2":"根据自身主副手和盔甲栏物品的诅咒附魔修改承受的伤害",
     "hpdlc.tooltips.cursed_soul_gai.3":"最多减免百分之80的伤害",
 
@@ -414,18 +440,41 @@
     "hpdlc.tooltips.newborn_dimension.2":"每级成长等级加1机械飞升进度",
 
     "item.hpdlc.water_wheel1":"水车",
-    "hpdlc.tooltips.water_wheel1":"如果器官周围有水桶，每秒增加2资源点",
+    "hpdlc.tooltips.water_wheel1":"如果器官周围有水桶，每秒增加4资源点",
 
     "item.hpdlc.large_water_wheel1":"大型水车",
-    "hpdlc.tooltips.large_water_wheel1":"如果器官周围有水桶，每秒增加4资源点",
+    "hpdlc.tooltips.large_water_wheel1":"如果器官周围有水桶，每秒增加8资源点",
 
     "item.hpdlc.windmill_bearing1":"风车轴承",
-    "hpdlc.tooltips.windmill_bearing1":"如果器官周围有风帆，每秒增加8资源点",
+    "hpdlc.tooltips.windmill_bearing1":"每秒增加16资源点",
 
-    "item.hpdlc.thermostat":"恒温器",
+    "item.hpdlc.thermostat":"温度调节器",
     "hpdlc.tooltips.thermostat.1":"空调？",
     "hpdlc.tooltips.thermostat.2":"如果体温大于50消耗25资源点，使体温变为0",
     "hpdlc.tooltips.thermostat.3":"如果体温小于负50消耗25资源点，使体温变为0",
+
+    "item.hpdlc.thermostat_hot":"温度调节器（高温）",
+    "hpdlc.tooltips.thermostat_hot.1":"手持熔岩桶右键，给予玩家20级升温buff，持续30分钟",
+    "hpdlc.tooltips.thermostat_hot.2":"每秒给与玩家抗火buff",
+    "hpdlc.tooltips.thermostat_hot.3":"多喝热水.jpg",
+
+    "item.hpdlc.thermostat_cold":"温度调节器（低温）",
+    "hpdlc.tooltips.thermostat_cold.1":"手持细雪桶（已增加配方）右键，给予玩家20级降温buff，持续30分钟",
+    "hpdlc.tooltips.thermostat_cold.2":"每秒给与玩家抗寒buff",
+
+    "item.hpdlc.lightning_rod1":"引雷针",
+    "hpdlc.tooltips.lightning_rod1.1":"这玩意放胸腔真的好吗？",
+    "hpdlc.tooltips.lightning_rod1.2":"手持铜块右键召唤闪电，并对周围敌人造成基于自身攻击力的伤害",
+    "hpdlc.tooltips.lightning_rod1.3":"每次被雷劈增加300资源点",
+
+    "item.hpdlc.oxygen_cylinder1":"氧气罐",
+    "hpdlc.tooltips.oxygen_cylinder1.1":"气泡低于一半时，消耗10资源点恢复",
+
+    "item.hpdlc.thorn_guard":"荆棘防护装置",
+    "hpdlc.tooltips.thorn_guard.1":"叠最厚的盾，挨最毒的打！",
+    "hpdlc.tooltips.thorn_guard.2":"将自身攻击力转化为护甲与韧性，机械飞升进度影响转化率",
+    "hpdlc.tooltips.thorn_guard.3":"受到攻击时，反伤基于自身护甲与韧性的伤害",
+    "hpdlc.tooltips.thorn_guard.4":"按下技能按键，对周围8格生物造成基于自身护甲与韧性的伤害，冷却10秒",
 
     "item.hpdlc.chicken_liver":"肝型麦乐鸡",
     "hpdlc.tooltips.chicken_liver.1":"每一点幸运属性，每秒有百分之2的概率清除自身debff"
